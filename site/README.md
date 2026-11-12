@@ -2,6 +2,8 @@
 
 The website for Theta Tau at Stony Brook University: **thetatausbu.com**.
 
+Built in 2026 by Amaan Abubakar ([amaaxn](https://github.com/amaaxn)), the chapter's webmaster.
+
 ## 1. What this is
 
 - The site is built with [Astro](https://astro.build), a tool that turns a folder of files into a fast website.
