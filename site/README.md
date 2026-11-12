@@ -146,10 +146,9 @@ The current content was pulled from the chapter's Google Drive in October 2026:
 - **SAC lobby headshots** — seven portraits from one shoot in the SAC lobby (Chi class: Amaan Abubakar, Damaris Ferrer, Hua Huang, Raheel Rahman, Ryan Ver Eecke, Delia Steiner; Phi class: Sparsh Jain), supplied by the webmaster in November 2026. Five of the files were only 1086×724, so those crops are about 400 to 480 pixels wide; replace them if the full-size originals turn up.
 - **LinkedIn profile photos** — seven brothers had not sent a headshot (Alex Mei, Aaron Chiang, Sumin Lee, David Grager, Vicki Li, Vivek Mahey, Nazar Nemy), so in November 2026 the webmaster had their LinkedIn profile photos saved from his own signed-in LinkedIn. LinkedIn pictures are tight squares, so these cards are closer on the face than the rest, David's and Vicki's most of all. Aaron's source is only 309 pixels and Vivek's is a dark, blurry photo, so those two are soft. Replace any of them when the brother sends a real headshot.
 - **E-board headshots** — the 2026–27 e-board photoshoot (the beach portraits), supplied by the chapter in October 2026. The originals are 1333×2000; the site uses 960×1200 crops.
+- **Maya Pulawska's headshot** — supplied by the webmaster in November 2026. The original is 2000×2000; the site uses a 960×1200 crop.
 
-**Still need a headshot** (they show their initials until a photo is added; see Photos above):
-
-- Psi: Maya Pulawska (also the only brother from Phi onward without a LinkedIn link)
+**Still need a headshot:** nobody. As of November 2026 every brother on the roster has a photo. Maya Pulawska (Psi) is the only brother from Phi onward without a LinkedIn link.
 
 ## 4. Every semester checklist
 
