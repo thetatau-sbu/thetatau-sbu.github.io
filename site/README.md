@@ -148,7 +148,7 @@ The current content was pulled from the chapter's Google Drive in October 2026:
 - **E-board headshots** — the 2026–27 e-board photoshoot (the beach portraits), supplied by the chapter in October 2026. The originals are 1333×2000; the site uses 960×1200 crops.
 - **Maya Pulawska's headshot** — supplied by the webmaster in November 2026. The original is 2000×2000; the site uses a 960×1200 crop.
 
-**Still need a headshot:** nobody. As of November 2026 every brother on the roster has a photo. Maya Pulawska (Psi) is the only brother from Phi onward without a LinkedIn link.
+**Still need a headshot:** nobody. As of November 2026 every brother on the roster has a photo, and every brother from Phi onward has a LinkedIn link.
 
 ## 4. Every semester checklist
 
