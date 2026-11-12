@@ -1,0 +1,362 @@
+[
+  {
+    "name": "Pizza Night",
+    "date": "2026-09-10",
+    "type": "social",
+    "rush": "Fall 2026"
+  },
+  {
+    "name": "Career Panel",
+    "date": "2026-09-09",
+    "type": "professional",
+    "rush": "Fall 2026"
+  },
+  {
+    "name": "Resume Review",
+    "date": "2026-09-08",
+    "type": "professional",
+    "rush": "Fall 2026"
+  },
+  {
+    "name": "Speed Friending",
+    "date": "2026-09-04",
+    "type": "social",
+    "rush": "Fall 2026"
+  },
+  {
+    "name": "Family Feud",
+    "date": "2026-09-03",
+    "type": "social",
+    "rush": "Fall 2026"
+  },
+  {
+    "name": "Craft Night",
+    "date": "2026-09-02",
+    "type": "social",
+    "rush": "Fall 2026"
+  },
+  {
+    "name": "Pre-Rush Bingo",
+    "date": "2026-05-11",
+    "type": "social",
+    "time": "7–9 PM",
+    "location": "SAC 302"
+  },
+  {
+    "name": "Roth Regatta",
+    "date": "2026-05-01",
+    "type": "social"
+  },
+  {
+    "name": "Banquet 2026",
+    "date": "2026-04-19",
+    "type": "social"
+  },
+  {
+    "name": "Topgolf",
+    "date": "2026-04-02",
+    "type": "social"
+  },
+  {
+    "name": "Habitat for Humanity build trip",
+    "date": "2026-03-14",
+    "type": "service",
+    "note": "Spring break, March 14–22."
+  },
+  {
+    "name": "Scavenger Hunt",
+    "date": "2025-11-03",
+    "type": "social"
+  },
+  {
+    "name": "Homecoming",
+    "date": "2025-10-25",
+    "type": "social"
+  },
+  {
+    "name": "Founder's Day 2025",
+    "date": "2025-10-18",
+    "type": "social"
+  },
+  {
+    "name": "Resume Review",
+    "date": "2025-09-12",
+    "type": "professional",
+    "rush": "Fall 2025"
+  },
+  {
+    "name": "Trivia Night",
+    "date": "2025-09-11",
+    "type": "social",
+    "rush": "Fall 2025"
+  },
+  {
+    "name": "Pie a Bro Fundraiser",
+    "date": "2025-05-01",
+    "type": "social"
+  },
+  {
+    "name": "Banquet 2025",
+    "date": "2025-04-19",
+    "type": "social"
+  },
+  {
+    "name": "Urban Air Trampoline Park",
+    "date": "2025-04-18",
+    "type": "social"
+  },
+  {
+    "name": "Saint Patrick's Day Parade",
+    "date": "2025-03-30",
+    "type": "service"
+  },
+  {
+    "name": "Demystifying Engineering",
+    "date": "2025-03-11",
+    "type": "professional"
+  },
+  {
+    "name": "Topgolf",
+    "date": "2025-02-25",
+    "type": "social"
+  },
+  {
+    "name": "Snow Day",
+    "date": "2025-02-08",
+    "type": "social"
+  },
+  {
+    "name": "Ski Trip",
+    "date": "2025-01-03",
+    "type": "social",
+    "note": "January 3–5."
+  },
+  {
+    "name": "Secret Santa",
+    "date": "2024-12-10",
+    "type": "social"
+  },
+  {
+    "name": "Ice Skating",
+    "date": "2024-12-07",
+    "type": "social"
+  },
+  {
+    "name": "Risk management workshop with CPO",
+    "date": "2024-12-02",
+    "type": "professional"
+  },
+  {
+    "name": "Friendsgiving Potluck",
+    "date": "2024-11-25",
+    "type": "social"
+  },
+  {
+    "name": "Aquarium Trip",
+    "date": "2024-11-24",
+    "type": "social"
+  },
+  {
+    "name": "Round 1",
+    "date": "2024-11-09",
+    "type": "social"
+  },
+  {
+    "name": "Mixer with Epsilon Psi Zeta",
+    "date": "2024-11-04",
+    "type": "social"
+  },
+  {
+    "name": "Homecoming",
+    "date": "2024-10-26",
+    "type": "social"
+  },
+  {
+    "name": "Founder's Day 2024",
+    "date": "2024-10-19",
+    "type": "social"
+  },
+  {
+    "name": "SASE National Convention",
+    "date": "2024-10-12",
+    "type": "professional"
+  },
+  {
+    "name": "Lewin Farm Brotherhood Event",
+    "date": "2024-10-05",
+    "type": "social"
+  },
+  {
+    "name": "Cookie Decorating",
+    "date": "2024-09-12",
+    "type": "social",
+    "rush": "Fall 2024"
+  },
+  {
+    "name": "Career Panel",
+    "date": "2024-09-11",
+    "type": "professional",
+    "rush": "Fall 2024"
+  },
+  {
+    "name": "Mini Roth Regatta",
+    "date": "2024-09-10",
+    "type": "social",
+    "rush": "Fall 2024"
+  },
+  {
+    "name": "Speed Friending",
+    "date": "2024-09-05",
+    "type": "social",
+    "rush": "Fall 2024"
+  },
+  {
+    "name": "Resume Review",
+    "date": "2024-09-04",
+    "type": "professional",
+    "rush": "Fall 2024"
+  },
+  {
+    "name": "Phone Charm Making",
+    "date": "2024-09-03",
+    "type": "social",
+    "rush": "Fall 2024"
+  },
+  {
+    "name": "Involvement Fair",
+    "date": "2024-08-28",
+    "type": "social"
+  },
+  {
+    "name": "Roth Regatta",
+    "date": "2024-04-26",
+    "type": "social"
+  },
+  {
+    "name": "Brotherhood Field Day",
+    "date": "2024-04-25",
+    "type": "social"
+  },
+  {
+    "name": "Leadership Workshop with AKPsi",
+    "date": "2024-04-19",
+    "type": "professional"
+  },
+  {
+    "name": "Karaoke & Game Night",
+    "date": "2024-04-14",
+    "type": "social"
+  },
+  {
+    "name": "NEMARC at Drexel University",
+    "date": "2024-04-13",
+    "type": "professional"
+  },
+  {
+    "name": "Eclipse Watch at Staller",
+    "date": "2024-04-08",
+    "type": "social"
+  },
+  {
+    "name": "Banquet 2024",
+    "date": "2024-04-06",
+    "type": "social"
+  },
+  {
+    "name": "Habitat for Humanity build trip",
+    "date": "2024-03-11",
+    "type": "service",
+    "note": "Spring break."
+  },
+  {
+    "name": "Crane-a-thon",
+    "date": "2024-02-28",
+    "type": "social"
+  },
+  {
+    "name": "Engineering Carnival",
+    "date": "2024-02-21",
+    "type": "social"
+  },
+  {
+    "name": "Lego Olympics",
+    "date": "2024-02-08",
+    "time": "7:30–9:30 PM",
+    "location": "SAC 305",
+    "type": "social",
+    "rush": "Spring 2024"
+  },
+  {
+    "name": "Speed Friending",
+    "date": "2024-02-07",
+    "time": "7–9 PM",
+    "location": "SAC 303",
+    "type": "social",
+    "rush": "Spring 2024"
+  },
+  {
+    "name": "Resume Review",
+    "date": "2024-02-05",
+    "time": "7–9 PM",
+    "location": "SAC 303",
+    "type": "professional",
+    "rush": "Spring 2024"
+  },
+  {
+    "name": "Jeopardy",
+    "date": "2024-01-31",
+    "time": "7:30–9 PM",
+    "location": "SAC 305",
+    "type": "social",
+    "rush": "Spring 2024"
+  },
+  {
+    "name": "Career Fair",
+    "date": "2024-01-30",
+    "time": "7–8:30 PM",
+    "location": "SAC 311",
+    "type": "professional",
+    "rush": "Spring 2024"
+  },
+  {
+    "name": "Bracelet Making",
+    "date": "2024-01-29",
+    "time": "7–9 PM",
+    "location": "SAC 303",
+    "type": "social",
+    "rush": "Spring 2024"
+  },
+  {
+    "name": "Topgolf",
+    "date": "2024-01-28",
+    "type": "social"
+  },
+  {
+    "name": "Secret Santa",
+    "date": "2023-12-15",
+    "type": "social"
+  },
+  {
+    "name": "Fold and Sip (pre-rush)",
+    "date": "2023-12-08",
+    "type": "social"
+  },
+  {
+    "name": "Beach Clean Up",
+    "date": "2023-11-11",
+    "type": "service"
+  },
+  {
+    "name": "Round One",
+    "date": "2023-10-12",
+    "type": "social"
+  },
+  {
+    "name": "Coffee Talk with Upperclassmen",
+    "date": "2021-11-22",
+    "time": "7–8:30 PM",
+    "location": "SAC 304",
+    "type": "professional",
+    "note": "Capped at 30 people."
+  }
+]

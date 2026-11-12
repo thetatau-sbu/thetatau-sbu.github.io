@@ -1,0 +1,96 @@
+---
+import Base from '../../layouts/Base.astro';
+import BrotherCard from '../../components/BrotherCard.astro';
+import ClassNav from '../../components/ClassNav.astro';
+import { actives, alumni, groupByClass, site } from '../../lib/data';
+const groups = groupByClass(alumni);
+---
+<Base title="Alumni" sheet="Alumni" description={`${alumni.length} Theta Tau alumni from Stony Brook, by pledge class, back to the founders in ${site.founded}.`}>
+  <header class="col sec">
+    <h1>Alumni</h1>
+    <p class="lede intro">{alumni.length} alumni since the founding class in {site.founded}.</p>
+    <nav class="tabs" aria-label="Actives and alumni">
+      <a href="/brothers/">Actives ({actives.length})</a>
+      <a href="/brothers/alumni/" aria-current="page">Alumni ({alumni.length})</a>
+    </nav>
+    <div class="search">
+      <label class="visually-hidden" for="q">Search alumni</label>
+      <input id="q" type="search" placeholder="Search by name, major, class or year" autocomplete="off" />
+      <span class="count" aria-live="polite"><span id="count">{alumni.length}</span> brothers</span>
+    </div>
+  </header>
+
+  {groups.map((g) => (
+    <section class="col sec" id={g.slug} data-group aria-labelledby={`h-${g.slug}`}>
+      <div class="h-bar">
+        <h2 class="h" id={`h-${g.slug}`}><span class="greek">{g.letter}</span> {g.name} class</h2>
+        <span class="n">{g.members.length} {g.members.length === 1 ? 'brother' : 'brothers'}</span>
+      </div>
+      <div class="tiles">
+        {g.members.map((b) => <BrotherCard b={b} />)}
+      </div>
+    </section>
+  ))}
+  <p class="col sec empty" hidden>No one matches that. Try a major or a year.</p>
+
+  <ClassNav />
+</Base>
+
+<script>
+  const input = document.getElementById('q') as HTMLInputElement;
+  const count = document.getElementById('count')!;
+  const empty = document.querySelector<HTMLElement>('.empty')!;
+  const groups = [...document.querySelectorAll<HTMLElement>('[data-group]')];
+  input.addEventListener('input', () => {
+    const terms = input.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
+    let shown = 0;
+    for (const g of groups) {
+      let inGroup = 0;
+      g.querySelectorAll<HTMLElement>('.bro').forEach((card) => {
+        const ok = terms.every((t) => card.dataset.search!.includes(t));
+        card.hidden = !ok;
+        if (ok) inGroup++;
+      });
+      g.hidden = inGroup === 0;
+      shown += inGroup;
+    }
+    count.textContent = String(shown);
+    empty.hidden = shown > 0;
+  });
+</script>
+
+<style>
+  .intro { margin-top: clamp(20px, 2vw, 36px); color: var(--text); }
+  .tabs { display: flex; flex-wrap: wrap; gap: 8px 28px; margin-top: clamp(16px, 1.4vw, 24px); font-weight: 500; }
+  .tabs a { color: var(--text); text-decoration: none; text-underline-offset: 6px; text-decoration-thickness: 2px; }
+  .tabs a:hover { text-decoration: underline; color: var(--text); }
+  .tabs a[aria-current='page'] { color: var(--gold-2); text-decoration: underline; }
+
+  /* Search: not sticky; count on the same row. */
+  .search { display: flex; align-items: center; gap: 16px; max-width: 640px; margin-top: 32px; }
+  input {
+    flex: 1 1 0; min-width: 0; height: 44px; padding: 0 14px;
+    background: var(--sheet-2); border: 1px solid var(--rule-strong); border-radius: 0;
+    color: var(--text); font: 400 16px/1 var(--font-text);
+  }
+  input::placeholder { color: var(--text-2); opacity: 1; }
+  input:focus { border-color: var(--gold-2); }
+  @media (min-width: 1600px) {
+    .search { max-width: 760px; }
+    input { height: 54px; font-size: 17px; padding: 0 18px; }
+  }
+  .count { flex: none; font-size: 14px; line-height: 1.4; color: var(--text-2); white-space: nowrap; }
+
+  .h-bar .n { font-size: 14px; line-height: 1.4; color: var(--text-2); }
+  @media (min-width: 1600px) { .h-bar .n, .count { font-size: 16px; } }
+
+  /* Greek class letter inside a Gorton heading: Gorton has no Greek glyphs. */
+  .h .greek {
+    font-family: var(--font-text), system-ui, sans-serif;
+    font-weight: 700; color: var(--gold-2);
+    text-transform: none; letter-spacing: 0; word-spacing: normal;
+  }
+
+  [data-group][hidden], .empty[hidden], .tiles :global(.bro[hidden]) { display: none; }
+  .empty { color: var(--text-2); }
+</style>

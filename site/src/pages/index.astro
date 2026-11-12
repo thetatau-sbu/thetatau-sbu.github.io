@@ -1,0 +1,262 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import Stamp from '../components/Stamp.astro';
+import Nameplate from '../components/Nameplate.astro';
+import BrotherCard from '../components/BrotherCard.astro';
+import { site, rush, stats, eboard } from '../lib/data';
+import chapterPhoto from '../assets/photos/chapter-2026.jpg';
+import brotherhoodPhoto from '../assets/photos/brotherhood-2026.jpg';
+import professionPhoto from '../assets/photos/profession-2025.jpg';
+import servicePhoto from '../assets/photos/service-2026.jpg';
+import campusPhoto from '../assets/photos/campus.jpg';
+
+// The brass band under the hero: six cells.
+const plate = [
+  { label: 'Chapter', value: site.chapter },
+  { label: 'Chartered', value: site.founded },
+  { label: 'Active brothers', value: stats.actives },
+  { label: 'Brothers', value: stats.brothers },
+  { label: 'Classes', value: stats.classes },
+  { label: 'Donations', value: site.donationsRaised },
+];
+
+// Pillar copy, verbatim from the chapter's archived site.
+// Photos (4:3 originals, cropped 3:2; `pos` is the object-position): Brotherhood -> the Gamma Beta class,
+// Profession -> resume review during Fall 2025 rush, Service -> the Habitat for Humanity build.
+const pillars = [
+  {
+    title: 'Brotherhood',
+    photo: brotherhoodPhoto,
+    pos: '50% 70%',
+    alt: 'The ten brothers of the Gamma Beta class lined up in their chapter jackets, April 2026',
+    caption: 'The Gamma Beta class, April 2026.',
+    body: 'We forge lifelong bonds of fraternal friendship, a journey that develops and delivers a network of lasting personal and professional relationships. We foster an inviting, safe, and social environment in which our members become lifelong friends.',
+  },
+  {
+    title: 'Profession',
+    photo: professionPhoto,
+    pos: '50% 55%',
+    alt: 'Brothers and rushees together in a classroom after resume review, September 2025',
+    caption: 'Resume review during Fall 2025 rush, September 2025.',
+    body: 'We develop and nurture engineers with strong communication, problem-solving, collaboration, and leadership skills that we demonstrate in our profession, our community, and in our lives.',
+  },
+  {
+    title: 'Service',
+    photo: servicePhoto,
+    pos: '50% 45%',
+    alt: 'Five brothers taking a selfie in front of a timber house frame at a Habitat for Humanity build',
+    caption: 'Habitat for Humanity build, spring break 2026.',
+    body: 'We are known for our service to our college, university and the larger community. Our service projects create a unifying environment for learning and personal growth for our members.',
+  },
+];
+
+const handle = (url: string) => '@' + url.replace(/\/$/, '').split('/').pop();
+---
+<Base sheet="Home" flush>
+  <!-- Hero: full-bleed split. Left: wordmark, lede, buttons (aligned to the wrap's left edge), caption at the bottom.
+       Right: the chapter photo to the viewport's right edge, kept near its 4:3 shape, the stamp across the seam. -->
+  <section class="hero">
+    <div class="hero-copy">
+      <h1 class="wordmark">Theta<br />Tau</h1>
+      <p class="lede intro">
+        {site.chapter} Chapter, {site.school}, since {site.founded}<br />
+        The only professional co-ed engineering fraternity.
+      </p>
+      <div class="btn-row">
+        <a class="btn" href="/rush/">Rush {rush.semester}</a>
+        <a class="btn btn--line" href="/brothers/">Meet our brothers</a>
+      </div>
+    </div>
+    <figure class="hero-photo">
+      <Image src={chapterPhoto} alt="The whole chapter in black Theta Tau jackets, seated and standing on a staircase, April 2026" widths={[800, 1200, 1600, 2000]} sizes="(min-width: 1600px) 50vw, (min-width: 1280px) 55vw, (min-width: 1100px) 60vw, 100vw" loading="eager" fetchpriority="high" />
+      <span class="scrim" aria-hidden="true"></span>
+      <Stamp seam />
+    </figure>
+    <p class="hero-cap">The chapter, April 2026.</p>
+  </section>
+
+  <Nameplate rows={plate} />
+
+  <section class="wrap sec">
+    <h2 class="h">Theta Tau at Stony Brook</h2>
+    <div class="about">
+      <p class="lede">At over 35,000 members, Theta Tau is the oldest, largest, and foremost Fraternity for Engineers. Established at Stony Brook University in 2013.</p>
+      <figure class="quote">
+        <blockquote><p>“{site.purpose}”</p></blockquote>
+        <figcaption>Purpose of Theta Tau, founded {site.nationalFounded} at the University of Minnesota</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="wrap sec">
+    <h2 class="h">Our pillars</h2>
+    <div class="pillars">
+      {pillars.map((p) => (
+        <div class="pillar">
+          <figure class="pillar-fig">
+            <div class="pillar-photo">
+              <Image src={p.photo} alt={p.alt} widths={[480, 800, 1170]} sizes="(max-width: 899px) calc(100vw - 40px), 30vw" style={`object-position: ${p.pos}`} />
+            </div>
+            <figcaption>{p.caption}</figcaption>
+          </figure>
+          <h3>{p.title}</h3>
+          <p>{p.body}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="wrap sec">
+    <div class="h-bar">
+      <h2 class="h">Executive board</h2>
+      <a href="/brothers/">All brothers</a>
+    </div>
+    <p class="eb-term">{eboard.term} executive board.</p>
+    <div class="eb-tiles">
+      {eboard.roles.map((r) => <BrotherCard b={r.brother} role={r.role} />)}
+    </div>
+  </section>
+
+  <!-- Full-bleed band: the campus in the fall under a black scrim, the two handles in the wrap. -->
+  <section class="ig-band sec">
+    <Image class="ig-bg" src={campusPhoto} alt="" widths={[1200, 1600, 2000]} sizes="100vw" />
+    <span class="ig-scrim" aria-hidden="true"></span>
+    <div class="wrap ig-inner">
+      <h2 class="h">Find us on Instagram</h2>
+      <div class="ig">
+        <div><a href={site.links.instagram}>{handle(site.links.instagram)}</a><p>Chapter account</p></div>
+        <div><a href={site.links.rushInstagram}>{handle(site.links.rushInstagram)}</a><p>Rush account</p></div>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  /* ---------- hero ---------- */
+  /* Phone and tablet (< 1100px): one column; text, then the photo at 4:3 inside the gutters with the
+     stamp over the black above its top-right, then the caption. */
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: 'copy' 'photo' 'cap';
+    padding: clamp(40px, 6vw, 72px) var(--gutter) clamp(32px, 5vw, 56px);
+  }
+  .hero-copy { grid-area: copy; container-type: inline-size; }
+  .intro { margin-top: clamp(20px, 2vw, 36px); }
+  .btn-row { margin-top: clamp(24px, 2.4vw, 44px); }
+
+  .hero-photo {
+    grid-area: photo; position: relative;
+    margin-top: 128px; aspect-ratio: 4 / 3;
+    border: 1px solid var(--rule);
+  }
+  .hero-photo :global(img) { width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%; }
+  .scrim { display: none; }
+  .hero-cap { grid-area: cap; max-width: none; margin-top: 10px; font-size: 14px; line-height: 1.45; color: var(--text-2); }
+
+  /* Desktop (>= 1100px): full-bleed split, text | photo 40 / 60 to 1279px, 45 / 55 to 1599px, 50 / 50 from
+     1600px. The left column's content starts at the wrap's left edge; the photo runs to the viewport's right
+     edge. The chapter photo is a 4:3 group shot that fills its frame edge to edge, so the hero's height tracks
+     the photo column's width (3/4 of it) rather than the viewport height, and the photo is never cropped at
+     the sides by more than its brick margins: if the text column ever needs more height than that, the photo
+     keeps its shape and sits on the brass band with the black sheet above it. */
+  @media (min-width: 1100px) {
+    .hero {
+      grid-template-columns: minmax(0, 40fr) minmax(0, 60fr);
+      grid-template-rows: minmax(0, 1fr) auto;
+      grid-template-areas: 'copy photo' 'cap photo';
+      min-height: 45vw; /* 3/4 of the 60vw photo column */
+      padding: 0;
+      /* the hero is a size container so its columns can pad to the wrap's left edge:
+         100cqw is the hero's width (no scrollbar), same base as the 1400px .wrap below */
+      container-type: inline-size;
+      --wrap-pad: max(var(--gutter), calc((100cqw - var(--wrap-max)) / 2));
+    }
+    .hero-copy {
+      align-self: center;
+      padding: 40px clamp(32px, 3vw, 64px) 20px var(--wrap-pad);
+    }
+    .hero-cap { margin: 0; padding: 0 32px 20px var(--wrap-pad); }
+    .hero-photo { margin: 0; aspect-ratio: auto; border: 0; border-left: 1px solid var(--rule); }
+    /* Bottom-anchored, full column width, at most the column's height. The photo is a 4:3 group shot with
+       the group centred and brick wall on both sides, so the 1206 / 935 box's small side crop is split evenly
+       (50%); a vertical crop takes ceiling above the back row rather than the front row's feet (70%). */
+    .hero-photo :global(img) {
+      position: absolute; left: 0; bottom: 0;
+      width: 100%; height: auto; aspect-ratio: 1206 / 935; max-height: 100%;
+      object-position: 50% 70%;
+    }
+    /* a short fade at the photo's left edge where it meets the text column (kept narrow so it doesn't
+       darken the brothers at the left end of the group) */
+    .scrim {
+      display: block; position: absolute; inset: 0; pointer-events: none;
+      background: linear-gradient(90deg, #000 0%, transparent 8%);
+    }
+  }
+  @media (min-width: 1280px) {
+    .hero { grid-template-columns: minmax(0, 45fr) minmax(0, 55fr); min-height: 41.25vw; /* 3/4 of 55vw */ }
+  }
+  @media (min-width: 1600px) {
+    /* The photo column stops growing at 1093px and the hero at 820px (4:3 of each other), so on screens wider
+       than about 2200px the group photo is never cropped: the text column takes the extra width instead. Below
+       that the crop is at most 4% (ceiling, since object-position is 70%). */
+    .hero { grid-template-columns: minmax(0, 1fr) min(50%, 1093px); min-height: min(820px, max(560px, 36vw)); }
+  }
+  @media (max-width: 599px) {
+    .hero-photo { margin-top: 88px; }
+  }
+
+  /* ---------- about ---------- */
+  .about { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px clamp(48px, 6vw, 120px); align-items: start; }
+  .about .lede { max-width: 60ch; }
+
+  /* ---------- pillars ---------- */
+  .pillars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px clamp(28px, 2.6vw, 48px); }
+  .pillar-photo { aspect-ratio: 3 / 2; border: 1px solid var(--rule); overflow: hidden; }
+  .pillar-photo :global(img) { width: 100%; height: 100%; object-fit: cover; }
+  .pillar-fig figcaption { margin-top: 10px; font-size: 14px; line-height: 1.45; color: var(--text-2); }
+  .pillar h3 { margin: 20px 0 10px; font-size: 24px; line-height: 1.25; }
+
+  /* ---------- executive board ---------- */
+  /* five tiles: one row of five from 900px, 3 + 2 from 600px, two per row (fifth alone) below */
+  .eb-term { margin-bottom: clamp(20px, 1.8vw, 32px); font-size: 17px; color: var(--text-2); }
+  @media (min-width: 1600px) { .eb-term { font-size: 18px; } }
+  .eb-tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 20px; }
+  @media (min-width: 600px) { .eb-tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  @media (min-width: 900px) { .eb-tiles { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 36px 24px; } }
+  @media (min-width: 1600px) { .eb-tiles { gap: 44px 32px; } }
+
+  /* ---------- instagram band ---------- */
+  .ig-band {
+    position: relative; isolation: isolate;
+    display: flex; align-items: center;
+    min-height: 420px; padding-block: clamp(56px, 6vw, 112px);
+    overflow: hidden;
+  }
+  .ig-band :global(.ig-bg) { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; }
+  .ig-scrim { position: absolute; inset: 0; z-index: -1; background: rgba(0, 0, 0, 0.62); }
+  .ig-inner { position: relative; }
+
+  /* two large handles side by side (stacked on phones), each with its line under it.
+     Each sits in a solid black cell with the title block's 1px rule: the campus photo is bright in
+     places (fall foliage, sky), and red over the 62% scrim measured only ~2.5:1 there; on black it is ~4.3:1. */
+  .ig { display: flex; flex-wrap: wrap; gap: 20px clamp(20px, 2vw, 32px); }
+  .ig > div { background: var(--sheet); border: 1px solid var(--rule); padding: clamp(18px, 1.6vw, 28px) clamp(20px, 2vw, 36px); max-width: 100%; }
+  .ig a { display: block; font: 700 clamp(28px, 3.4vw, 56px)/1.1 var(--font-text); color: var(--red); overflow-wrap: anywhere; }
+  .ig a:hover { color: var(--gold-2); }
+  .ig p { margin: 14px 0 0; font-size: 14px; line-height: 1.4; color: var(--text-2); }
+
+  @media (max-width: 899px) {
+    .about { grid-template-columns: minmax(0, 1fr); }
+    .pillars { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (min-width: 600px) and (max-width: 899px) {
+    .pillar { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); column-gap: 28px; }
+    .pillar-fig { grid-row: span 2; }
+    .pillar h3 { margin-top: 0; }
+  }
+  @media (max-width: 599px) {
+    .ig { flex-direction: column; }
+  }
+</style>

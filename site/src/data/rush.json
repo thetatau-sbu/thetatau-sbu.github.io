@@ -1,0 +1,41 @@
+{
+  "semester": "Spring 2027",
+  "startDate": null,
+  "endDate": null,
+  "interestFormUrl": null,
+  "flyer": null,
+  "flyerSemester": null,
+  "datesNote": "Dates drop at the start of the spring semester. Follow @sbuthetataurush so you don't miss the first event.",
+  "chairs": [
+    "Prattay Dey",
+    "Rakrita Rao",
+    "Vincent Blendell"
+  ],
+  "events": [],
+  "faq": [
+    {
+      "q": "What is Theta Tau?",
+      "a": "Theta Tau is a co-ed professional engineering fraternity that values brotherhood, profession, and service. You can find our brothers at job conferences, local beach clean-ups, or building houses for Habitat for Humanity."
+    },
+    {
+      "q": "Can I rush as a freshman?",
+      "a": "Only second-semester freshmen qualify for an interview. However, first-semester freshmen are always welcome at our events and can rush again in the following semesters."
+    },
+    {
+      "q": "What is rush, and how do I rush?",
+      "a": "Rush is a two week period where rushes and brothers get to know each other. There are 6 events total, including professional and fun team bonding activities. To rush, all you have to do is show up to our events and be yourself!"
+    },
+    {
+      "q": "How do I get an interview?",
+      "a": "Attend at least 3 events, with one including an informational session. You must have a GPA (at least a second semester freshman). CEAS major preferred."
+    },
+    {
+      "q": "What happens after the interview?",
+      "a": "After receiving a bid, there is a 6 week process (equivalent to a 4 credit class) designed to instill the core values of Theta Tau and help new members develop lifelong connections with all brothers."
+    },
+    {
+      "q": "Any other questions?",
+      "a": "Contact our rush chairs or DM @sbuthetataurush!!"
+    }
+  ]
+}

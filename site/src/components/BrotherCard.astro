@@ -1,0 +1,45 @@
+---
+// Brother tile: 4:5 photo with a 1px rule, then role (gold-2), name, major, class year, LinkedIn.
+// Lay tiles out in a `.tiles` grid (global.css). `showClass` appends the pledge class name
+// to the year line ("Class of 2026, Upsilon"). `data-search` feeds the alumni filter.
+import { Image } from 'astro:assets';
+import type { Brother } from '../lib/data';
+
+interface Props { b: Brother; role?: string; showClass?: boolean }
+const { b, role, showClass = false } = Astro.props;
+const initials = b.name.split(/\s+/).map((p) => p[0]).slice(0, 2).join('');
+const yearLine = [b.gradYear ? `Class of ${b.gradYear}` : '', showClass ? b.pledgeClass : ''].filter(Boolean).join(', ');
+---
+<article class="bro" data-search={`${b.name} ${b.major} ${b.pledgeClass} ${b.gradYear ?? ''}`.toLowerCase()}>
+  <div class="photo">
+    {b.image
+      ? <Image src={b.image} alt={b.name} widths={[280, 560]} sizes="(max-width: 599px) 46vw, (max-width: 1099px) 30vw, 270px" loading="lazy" />
+      : <span class="initials" aria-hidden="true">{initials}</span>}
+  </div>
+  {role && <p class="role">{role}</p>}
+  <h3 class="name">{b.name}</h3>
+  {b.major && <p class="meta">{b.major}</p>}
+  {yearLine && <p class="meta">{yearLine}</p>}
+  {b.linkedin && <p class="meta"><a href={b.linkedin} aria-label={`${b.name} on LinkedIn`}>LinkedIn</a></p>}
+</article>
+
+<style>
+  /* photo, then a tight stack with 4px gaps; no paragraph margins inside the tile */
+  .bro { min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+  .bro > :is(p, h3) { margin: 0; max-width: none; }
+  .photo { position: relative; aspect-ratio: 4 / 5; border: 1px solid var(--rule); margin-bottom: 6px; overflow: hidden; }
+  .photo :global(img) { width: 100%; height: 100%; object-fit: cover; object-position: center 28%; }
+  .initials {
+    position: absolute; inset: 0; display: grid; place-items: center;
+    font: 700 32px/1 var(--font-text); color: var(--text-2);
+  }
+  .role { font-weight: 500; font-size: 14px; line-height: 1.35; color: var(--gold-2); }
+  .name { font: 700 16px/1.3 var(--font-text); color: var(--text); }
+  .meta { font-size: 14px; line-height: 1.4; color: var(--text-2); }
+  .meta a { color: var(--red); }
+  .meta a:hover { color: var(--gold-2); }
+  @media (min-width: 1600px) {
+    .name { font-size: 18px; }
+    .role, .meta { font-size: 15px; }
+  }
+</style>

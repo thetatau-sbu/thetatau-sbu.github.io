@@ -1,0 +1,137 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import RushStatus from '../components/RushStatus.astro';
+import { rush, site, lastRush, fmtDate, type ChapterEvent } from '../lib/data';
+
+// Flyer: rush.flyer is a file name in src/assets/rush/ (null = no figure).
+const flyers = import.meta.glob<{ default: ImageMetadata }>('../assets/rush/*.{jpg,jpeg,png,webp}', { eager: true });
+const flyerByFile = Object.fromEntries(Object.entries(flyers).map(([p, m]) => [p.split('/').pop()!, m.default]));
+const flyer = rush.flyer ? flyerByFile[rush.flyer] : undefined;
+if (rush.flyer && !flyer) throw new Error(`rush.json: flyer "${rush.flyer}" is not in src/assets/rush/`);
+const flyerSemester = rush.flyerSemester ?? rush.semester;
+
+// Schedule: this rush's events, or the last rush on record until they're posted.
+const current = rush.events as ChapterEvent[];
+const schedule = current.length ? current : lastRush?.events ?? [];
+const showingLast = !current.length && Boolean(lastRush);
+const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+const when = (e: ChapterEvent) => [fmtDate(e.date), e.time, e.location].filter(Boolean).join(', ');
+// Time and room, when either exists, go on a second line under the event name ("7–9 PM, SAC 303"), as on /events/.
+const place = (e: ChapterEvent) => [e.time, e.location].filter(Boolean).join(', ');
+
+// FAQ answers that mention the rush Instagram handle get it as a link.
+const rushHandle = '@' + site.links.rushInstagram.replace(/\/$/, '').split('/').pop();
+---
+<Base title={`Rush ${rush.semester}`} sheet="Rush" description={`Rush Theta Tau at Stony Brook in ${rush.semester}. Answers to common questions and the rush schedule.`}>
+  <section class="col sec">
+    <h1>Rush {rush.semester}</h1>
+    <p class="lede intro">To rush, all you have to do is show up to our events and be yourself!</p>
+    <div class="status"><RushStatus /></div>
+  </section>
+
+  <section class="col sec" id="faq">
+    <div class="faq-wrap" class:list={[{ 'faq-wrap--flyer': flyer }]}>
+      <div>
+        <h2 class="h">FAQ</h2>
+        <dl class="faq">
+          {rush.faq.map((f) => (
+            <div>
+              <dt>{f.q}</dt>
+              <dd>{f.a.split(rushHandle).map((part, i) => (
+                <Fragment>{i > 0 && <a href={site.links.rushInstagram}>{rushHandle}</a>}{part}</Fragment>
+              ))}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+      {flyer && (
+        <figure class="fig flyer">
+          <Image src={flyer} alt={`Theta Tau rush flyer for ${flyerSemester}, listing the six rush events with their rooms and times`} widths={[520, 840, 1200]} sizes="(max-width: 899px) min(100vw - 40px, 520px), 40vw" />
+          <figcaption>Rush flyer, {flyerSemester}.</figcaption>
+        </figure>
+      )}
+    </div>
+  </section>
+
+  {schedule.length > 0 && (
+    <section class="col sec" id="schedule">
+      <h2 class="h">Schedule</h2>
+      {showingLast && (
+        <p class="before">
+          {rush.startDate ? `The ${rush.semester} schedule isn't posted yet.` : `${rush.semester} dates are TBA.`} This was the {lastRush!.semester} schedule, so you know what to expect.
+        </p>
+      )}
+      <table class="tbl tbl--events">
+        <thead>
+          <tr><th class="stack" scope="col">Event</th><th scope="col">Date</th><th scope="col">Event</th><th scope="col">Type</th></tr>
+        </thead>
+        <tbody>
+          {schedule.map((e) => (
+            <tr>
+              <td class="stack">
+                <span class="stack-name">{e.name}</span>
+                <span class="stack-line">{when(e)}</span>
+                <span class="stack-line">{cap(e.type)}</span>
+                {e.note && <span class="stack-line">{e.note}</span>}
+              </td>
+              <td data-label="Date"><time datetime={e.date}>{fmtDate(e.date)}</time></td>
+              <td data-label="Event">{e.name}{place(e) && <span class="tbl-sub">{place(e)}</span>}{e.note && <span class="tbl-sub">{e.note}</span>}</td>
+              <td data-label="Type">{cap(e.type)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+  )}
+
+  {rush.chairs.length > 0 && (
+    <section class="col sec">
+      <h2 class="h">Rush chairs</h2>
+      <ul class="chairs">
+        {(rush.chairs as string[]).map((c) => <li>{c}</li>)}
+      </ul>
+    </section>
+  )}
+</Base>
+
+<style>
+  .intro { margin-top: clamp(20px, 2vw, 36px); }
+  .status { margin-top: clamp(32px, 3vw, 56px); }
+
+  /* FAQ and flyer side by side from 900px (flyer sticks to the top of its column); stacked below, flyer last.
+     With no flyer the FAQ takes the whole column: its questions run in two columns from 1100px. */
+  .faq-wrap { display: grid; grid-template-columns: minmax(0, 1fr); gap: 40px; align-items: start; }
+  .faq-wrap .h { margin-top: 0; }
+  @media (min-width: 900px) {
+    .faq-wrap--flyer { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(48px, 5vw, 96px); }
+    .flyer { position: sticky; top: 24px; }
+  }
+
+  /* phones/tablets: capped; from 900px the flyer fills its column */
+  .flyer { max-width: 520px; }
+  @media (min-width: 900px) { .flyer { max-width: none; } }
+
+  .before { margin-bottom: 20px; }
+
+  .faq { max-width: 66ch; }
+  @media (min-width: 1100px) {
+    .faq-wrap:not(.faq-wrap--flyer) .faq {
+      max-width: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 32px clamp(48px, 5vw, 96px); align-items: start;
+    }
+    .faq-wrap:not(.faq-wrap--flyer) .faq > div { max-width: 66ch; }
+    .faq-wrap:not(.faq-wrap--flyer) .faq > div + div { margin-top: 0; }
+  }
+  .faq > div + div { margin-top: 24px; }
+  .faq dt { font: 700 18px/1.4 var(--font-text); }
+  .faq dd { margin-top: 6px; font-size: 17px; line-height: 1.6; color: var(--text); }
+  @media (min-width: 1600px) {
+    .faq > div + div { margin-top: 30px; }
+    .faq dt { font-size: 21px; }
+    .faq dd { font-size: 19px; }
+  }
+
+  .chairs { list-style: none; margin: 0; padding: 0; font-size: 18px; line-height: 1.6; }
+</style>

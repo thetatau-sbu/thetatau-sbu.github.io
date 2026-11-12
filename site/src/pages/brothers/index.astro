@@ -1,0 +1,55 @@
+---
+import Base from '../../layouts/Base.astro';
+import BrotherCard from '../../components/BrotherCard.astro';
+import ClassNav from '../../components/ClassNav.astro';
+import { actives, alumni, eboard, groupByClass, stats } from '../../lib/data';
+const groups = groupByClass(actives);
+---
+<Base title="Brothers" sheet="Brothers" description="Meet the active brothers and executive board of Theta Tau at Stony Brook University.">
+  <header class="col sec">
+    <h1>Meet our brothers</h1>
+    <p class="lede intro">{stats.actives} active brothers in {groups.length} classes, and {alumni.length} alumni.</p>
+    <nav class="tabs" aria-label="Actives and alumni">
+      <a href="/brothers/" aria-current="page">Actives ({actives.length})</a>
+      <a href="/brothers/alumni/">Alumni ({alumni.length})</a>
+    </nav>
+  </header>
+
+  {eboard.roles.length > 0 && (
+    <section class="col sec" aria-labelledby="eboard">
+      <h2 class="h" id="eboard">Executive board</h2>
+      <div class="tiles">
+        {eboard.roles.map((r) => <BrotherCard b={r.brother} role={r.role} />)}
+      </div>
+    </section>
+  )}
+
+  {groups.map((g) => (
+    <section class="col sec" id={g.slug} aria-labelledby={`h-${g.slug}`}>
+      <div class="h-bar">
+        <h2 class="h" id={`h-${g.slug}`}><span class="greek">{g.letter}</span> {g.name} class</h2>
+        <a href={`/brothers/class/${g.slug}/`}>Full class</a>
+      </div>
+      <div class="tiles">
+        {g.members.map((b) => <BrotherCard b={b} />)}
+      </div>
+    </section>
+  ))}
+
+  <ClassNav />
+</Base>
+
+<style>
+  .intro { margin-top: clamp(20px, 2vw, 36px); color: var(--text); }
+  .tabs { display: flex; flex-wrap: wrap; gap: 8px 28px; margin-top: clamp(16px, 1.4vw, 24px); font-weight: 500; }
+  .tabs a { color: var(--text); text-decoration: none; text-underline-offset: 6px; text-decoration-thickness: 2px; }
+  .tabs a:hover { text-decoration: underline; color: var(--text); }
+  .tabs a[aria-current='page'] { color: var(--gold-2); text-decoration: underline; }
+
+  /* Greek class letter inside a Gorton heading: Gorton has no Greek glyphs. */
+  .h .greek {
+    font-family: var(--font-text), system-ui, sans-serif;
+    font-weight: 700; color: var(--gold-2);
+    text-transform: none; letter-spacing: 0; word-spacing: normal;
+  }
+</style>

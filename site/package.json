@@ -1,0 +1,19 @@
+{
+  "name": "thetatau-sbu",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "node scripts/check-data.mjs && astro build",
+    "preview": "astro preview",
+    "check-data": "node scripts/check-data.mjs",
+    "og": "node scripts/make-og.mjs",
+    "graduate": "node scripts/graduate.mjs"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "3.7.4",
+    "@fontsource-variable/atkinson-hyperlegible-next": "5.3.0",
+    "astro": "7.3.5"
+  }
+}

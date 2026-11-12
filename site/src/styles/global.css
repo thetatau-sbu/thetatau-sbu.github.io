@@ -1,0 +1,300 @@
+/* Theta Tau, Zeta Epsilon: round 3, "the black drafting sheet".
+   Spec: /DESIGN-DIRECTION.md. The page is a black CAD sheet with a faint gray grid, laid out as a centered,
+   wide website (1400px wrap, full-bleed bands on the home page);
+   black, red and gold only. Gorton lettering for titles, Atkinson for everything else.
+   Atkinson ships latin + latin-ext only (no greek subset): Greek letters fall back to system-ui. */
+
+@import '@fontsource-variable/atkinson-hyperlegible-next/wght.css';
+@import '@fontsource-variable/atkinson-hyperlegible-next/wght-italic.css';
+
+/* Open Gorton (MIT, src/fonts/open-gorton/LICENSE). Caps only: always pair with .plate rules. */
+@font-face {
+  font-family: 'Open Gorton';
+  src: url('../fonts/open-gorton/OpenGorton-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Open Gorton';
+  src: url('../fonts/open-gorton/OpenGorton-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ================= tokens ================= */
+:root {
+  /* the base colors (DESIGN-DIRECTION.md, "Color") */
+  --sheet: #000000;     /* true black: the page, header strip, title block */
+  --sheet-2: #121212;   /* rush status panel fill, phone menu panel */
+  --text: #f2eee6;      /* warm white: body, titles, nav, table cells, button fill */
+  --text-2: #b4aea2;    /* captions, majors, table meta */
+  --gold: #c9a24a;      /* brass: nameplate surface, header and title-block rules */
+  --gold-2: #e3c879;    /* gold as text or thin lines on black */
+  --red: #cf3a35;       /* stamp, links in text, LinkedIn, hover */
+  --red-deep: #8f1d22;  /* red as a surface (header rush cell, button hover), white text on it */
+
+  --grid: rgba(255, 255, 255, 0.06);        /* 20px squares */
+  --grid-heavy: rgba(255, 255, 255, 0.10);  /* every 100px */
+  --rule: rgba(242, 238, 230, 0.28);        /* table rows, under h2, around photos */
+  --rule-strong: rgba(242, 238, 230, 0.5);  /* under table headers, status panel border */
+
+  /* aliases for names used before the black sheet; keep so older markup still renders */
+  --paper: var(--sheet);
+  --ink: var(--text);
+  --ink-2: var(--text-2);
+  --rule-on-ink: var(--rule);
+  --red-hover: var(--gold-2);
+
+  /* the sheet pattern, shared by body and the phone menu panel */
+  --pad-grid:
+    repeating-linear-gradient(0deg, var(--grid) 0 1px, transparent 1px 20px),
+    repeating-linear-gradient(90deg, var(--grid) 0 1px, transparent 1px 20px),
+    repeating-linear-gradient(0deg, var(--grid-heavy) 0 1px, transparent 1px 100px),
+    repeating-linear-gradient(90deg, var(--grid-heavy) 0 1px, transparent 1px 100px);
+
+  --font-plate: 'Open Gorton', 'Atkinson Hyperlegible Next Variable', system-ui, sans-serif;
+  --font-text: 'Atkinson Hyperlegible Next Variable', 'Atkinson Hyperlegible Next', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* layout: centered wrap (content width / side gutters), gap between sections, header strip height */
+  --wrap-max: 1400px;
+  --gutter: clamp(20px, 4vw, 64px);
+  --gap-section: 96px;
+  --header-strip: 64px;
+  /* left/right padding that lines a full-bleed band's content up with the wrap */
+  --wrap-pad: max(var(--gutter), calc((100% - var(--wrap-max)) / 2));
+}
+@media (min-width: 1600px) {
+  :root { --header-strip: 76px; }
+}
+@media (max-width: 899px) {
+  :root { --gap-section: 80px; }
+}
+@media (max-width: 599px) {
+  :root { --gap-section: 64px; }
+}
+
+/* ================= base (zero-specificity element defaults) ================= */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  color: var(--text);
+  background-color: var(--sheet);
+  background-image: var(--pad-grid);
+  background-attachment: scroll;
+  font: 400 17px/1.6 var(--font-text);
+  -webkit-font-smoothing: antialiased;
+}
+/* type scales up with the viewport: 16 phone, 17 default, 18 from 1600px, 19 from 2000px */
+@media (max-width: 599px) { body { font-size: 16px; } }
+@media (min-width: 1600px) { body { font-size: 18px; } }
+@media (min-width: 2000px) { body { font-size: 19px; } }
+::selection { background: var(--gold-2); color: #000; }
+
+:where(h1, h2, h3, h4, p, figure, blockquote, dl, dd, ul, ol) { margin: 0; }
+:where(p) { max-width: 66ch; text-wrap: pretty; }
+:where(p + p) { margin-top: 1em; }
+:where(img) { display: block; max-width: 100%; height: auto; }
+:where(button, input, select, textarea) { font: inherit; color: inherit; }
+
+/* Text links: red, thin underline. Components override with a class. */
+:where(a) {
+  color: var(--red);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+:where(a:hover) { color: var(--gold-2); }
+
+:focus-visible { outline: 2px solid var(--gold-2); outline-offset: 3px; }
+
+/* ================= type ================= */
+/* Anything lettered with the Gorton template. HTML stays sentence case; CSS uppercases. */
+:where(h1, h2), .plate, .wordmark, .page-title, .h {
+  font-family: var(--font-plate);
+  font-weight: 700;
+  text-transform: uppercase;
+  /* Gorton's space glyph is 1.32em wide; -0.9em leaves ~0.42em, a normal-looking single space. */
+  word-spacing: -0.9em;
+  letter-spacing: 0.02em;
+}
+
+/* Titles are warm white, never gold. */
+:where(h1, h2) { color: var(--text); }
+/* Page title (every h1 by default). */
+:where(h1), .page-title { font-size: clamp(44px, 7vw, 120px); line-height: 0.95; }
+
+/* Home wordmark, stacked "THETA" / "TAU". Sized by its column (container query units on .hero-copy):
+   "THETA" in Gorton Bold measures ~3.6em, so 27cqi keeps it inside the hero's left column at every width;
+   12vw / 240px is the ceiling the direction asks for. */
+.wordmark {
+  font-size: clamp(64px, min(12vw, 27cqi), 240px);
+  line-height: 0.88;
+  word-spacing: -0.95em;
+}
+
+/* Default h2 and the section heading. Use <h2 class="h"> for sections: adds the rule. */
+:where(h2), .h { font-size: clamp(24px, 2.2vw, 44px); line-height: 1.1; }
+.h {
+  margin: 56px 0 clamp(20px, 1.8vw, 32px);
+  padding-bottom: clamp(10px, 0.8vw, 16px);
+  border-bottom: 1px solid var(--rule);
+}
+/* Heading with a link on the same baseline: <div class="h-bar"><h2 class="h">…</h2><a>…</a></div> */
+.h-bar {
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px;
+  margin: 56px 0 clamp(20px, 1.8vw, 32px); padding-bottom: clamp(10px, 0.8vw, 16px); border-bottom: 1px solid var(--rule);
+}
+.h-bar > .h { margin: 0; padding: 0; border: 0; }
+.h-bar > a { font-weight: 500; font-size: 17px; }
+@media (min-width: 1600px) { .h-bar > a { font-size: 18px; } }
+
+:where(h3) { font: 700 20px/1.3 var(--font-text); }
+.lede { font-size: 20px; line-height: 1.5; }
+@media (min-width: 1300px) { .lede { font-size: 22px; } }
+@media (min-width: 1600px) { .lede { font-size: 24px; } }
+.small { font-size: 14px; line-height: 1.45; color: var(--text-2); }
+/* Class letters (Θ Τ Υ …). Open Gorton has no Greek glyphs; Atkinson has no Greek subset either,
+   so this resolves to the system sans (SF Pro / Segoe UI / Roboto), never a serif. */
+.greek { font-family: var(--font-text), system-ui, sans-serif; font-weight: 700; color: var(--gold-2); text-transform: none; }
+
+/* ================= layout ================= */
+/* <main class="pad">: the sheet. Pages that start with a full-bleed band (home) use .pad--flush. */
+.pad { padding: clamp(40px, 5vw, 96px) 0 var(--gap-section); }
+.pad--flush { padding: 0; }
+
+/* Content container: centered, 1400px of content, fluid gutters. .col is the same thing
+   (older pages use it). Full-bleed bands put a .wrap inside, or pad with var(--wrap-pad). */
+.wrap, .col { width: min(100% - 2 * var(--gutter), var(--wrap-max)); margin-inline: auto; }
+
+/* Section: <section class="col sec">. Only space separates sections. */
+.sec { margin-top: var(--gap-section); }
+.sec:first-child { margin-top: 0; }
+.sec > .h:first-child, .sec > .h-bar:first-child { margin-top: 0; }
+
+/* Brother tiles grid. */
+.tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 20px; list-style: none; padding: 0; }
+@media (min-width: 600px) { .tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 900px) { .tiles { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 1100px) { .tiles { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 36px 24px; } }
+@media (min-width: 1600px) { .tiles { gap: 44px 32px; } }
+
+/* ================= components ================= */
+/* Figure: <figure class="fig"><img><figcaption>. Photo with a 1px rule, factual caption. */
+.fig img { width: 100%; border: 1px solid var(--rule); }
+.fig figcaption { margin-top: 10px; font-size: 14px; line-height: 1.45; color: var(--text-2); }
+
+/* Quote: <figure class="quote"><blockquote><p>…</p></blockquote><figcaption>source</figcaption></figure> */
+.quote blockquote { border-left: 2px solid var(--red); padding: 4px 0 4px 20px; }
+.quote blockquote p { font: italic 400 clamp(21px, 1.6vw, 30px)/1.45 var(--font-text); }
+.quote figcaption { margin-top: 10px; padding-left: 22px; font-size: 14px; color: var(--text-2); }
+
+/* Table: <table class="tbl">, give each <td data-label="Header"> for the phone layout. */
+.tbl { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.45; color: var(--text); }
+.tbl th {
+  text-align: left; font-weight: 700; font-size: 14px; padding: 10px 12px;
+  border-bottom: 1px solid var(--rule-strong); vertical-align: bottom;
+}
+.tbl td { padding: 10px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.tbl :is(th, td):first-child { padding-left: 0; }
+/* second line inside a cell (event time and room, event note, team): <span class="tbl-sub"> */
+@media (min-width: 1600px) {
+  .tbl { font-size: 17px; }
+  .tbl th { font-size: 15px; }
+  .tbl :is(th, td) { padding: 12px 16px; }
+}
+.tbl-sub { display: block; margin-top: 2px; font-size: 14px; line-height: 1.4; color: var(--text-2); }
+@media (max-width: 599px) {
+  .tbl thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .tbl, .tbl tbody, .tbl tr, .tbl td { display: block; }
+  .tbl tr { padding: 12px 0; border-bottom: 1px solid var(--rule); }
+  .tbl td { padding: 3px 0; border: 0; }
+  .tbl td[data-label]::before {
+    content: attr(data-label); display: block; font-size: 13px; line-height: 1.4; color: var(--text-2);
+  }
+}
+
+/* Event tables: .tbl.tbl--events. Each <tr> starts with a td.stack cell (and the head row with
+   a th.stack): the event name, then "date, time, room", then the type and any note. From 600px up the
+   stack cell is hidden and the normal columns show; on phones only the stack cell shows, one event per row. */
+.tbl--events .stack { display: none; }
+.tbl--events :is(th, td):nth-child(2) { padding-left: 0; }
+.stack-name { display: block; font: 700 16px/1.4 var(--font-text); color: var(--text); }
+.stack-line { display: block; margin-top: 2px; font-size: 14px; line-height: 1.4; color: var(--text-2); }
+@media (max-width: 599px) {
+  .tbl--events tr { padding: 0; }
+  .tbl--events td { display: none; }
+  .tbl--events td.stack { display: block; padding: 14px 0; }
+}
+
+/* Buttons: .btn (warm white, black text) and .btn--line (outline). Sentence case, no icons.
+   Hover on both: the deep red surface with white text. */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 46px; padding: 0 20px;
+  border: 1px solid var(--text); border-radius: 0;
+  background: var(--text); color: #000;
+  font: 700 15px/1.2 var(--font-text);
+  text-decoration: none; cursor: pointer;
+}
+.btn--line { background: transparent; border-color: var(--rule-strong); color: var(--text); }
+.btn:hover, .btn--line:hover { background: var(--red-deep); border-color: var(--red-deep); color: #fff; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
+@media (min-width: 1600px) {
+  .btn { min-height: 54px; padding: 0 28px; font-size: 17px; }
+  .btn-row { gap: 16px; }
+}
+
+/* ================= accessibility ================= */
+.visually-hidden {
+  position: absolute !important; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+.skip {
+  position: absolute; left: -9999px; top: 8px; z-index: 100;
+  background: var(--text); color: #000; padding: 8px 14px; font-weight: 700; text-decoration: none;
+}
+.skip:focus { left: 8px; }
+
+/* ===================================================================
+   LEGACY, remove after round 3.
+   Old class names and variables still used by rush, events, careers,
+   brothers/**, 404, RushStatus and ClassNav until they are rebuilt.
+   Light text on the black sheet; --ink / --paper are aliases (see tokens).
+   =================================================================== */
+:root {
+  --text-dim: var(--text-2);
+  --text-ink: var(--text);
+  --text-ink-dim: var(--text-2);
+  --red-2: var(--red);
+  --ink-3: transparent;
+  --paper-2: transparent;
+  --line: var(--rule);
+  --line-ink: var(--rule);
+  --font-display: var(--font-plate);
+  --font-body: var(--font-text);
+  --font-mono: var(--font-text);
+  --radius: 0;
+  --header-h: 0px;
+  --wrap: var(--wrap-max);
+}
+.section { padding-block: 56px; }
+.section--paper, .section--ink2, .section--red { background: none; color: inherit; }
+.page-hero { padding-block: 0 24px; }
+.page-hero .lede { margin-top: 20px; }
+.section-head { margin-bottom: 32px; }
+.section-head h2 { margin-bottom: 12px; }
+.kicker, .mono, .tag, .gold, .display { font: inherit; color: inherit; letter-spacing: normal; text-transform: none; }
+.kicker { display: block; margin-bottom: 8px; }
+.tag { display: inline; }
+.link-arrow { display: inline-flex; align-items: center; gap: 6px; }
+.btn svg { width: 1em; height: 1em; }
+.btn--red, .btn--gold { background: var(--text); color: #000; }
+.btn--ghost { background: transparent; border-color: var(--rule-strong); color: var(--text); }
+.btn--red:hover, .btn--gold:hover, .btn--ghost:hover { background: var(--red-deep); border-color: var(--red-deep); color: #fff; }
+.grid-bg { background: none; }
+.frame { position: static; }
+.facts { margin: 0; }
+.facts dd { margin: 0; }

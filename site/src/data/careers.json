@@ -1,0 +1,1109 @@
+[
+  {
+    "name": "Prattay Dey",
+    "company": "Amazon",
+    "team": null,
+    "position": "Software Engineer Intern",
+    "location": "Palo Alto, CA",
+    "type": "internship",
+    "year": 2026
+  },
+  {
+    "name": "Hua Huang",
+    "company": "Arm",
+    "team": null,
+    "position": "Physical Implementation Intern",
+    "location": "San Diego, CA",
+    "type": "internship",
+    "year": 2026
+  },
+  {
+    "name": "Vicki Li",
+    "company": "Center for Clean Water Technology",
+    "team": null,
+    "position": "Summer Research Intern",
+    "location": "Stony Brook, NY",
+    "type": "internship",
+    "year": 2026
+  },
+  {
+    "name": "Andy Yang",
+    "company": "Center for Reproductive Rights",
+    "team": null,
+    "position": "Intern",
+    "location": "New York, NY",
+    "type": "internship",
+    "year": 2026
+  },
+  {
+    "name": "Rylee Nguyen",
+    "company": "Cintas",
+    "team": null,
+    "position": "Mechanical Engineering Intern",
+    "location": "Atlanta, GA",
+    "type": "internship",
+    "year": 2026
+  },
+  {
+    "name": "Alvin Kuruvilla",
+    "company": "GE Vernova",
+    "team": "via SASE",
+    "position": "Nuclear Engineering Intern",
+    "location": "Wilmington, NC",
+    "type": "internship",
+    "year": 2026
+  },
+  {
+    "name": "Justin Xie",
+    "company": "Honeywell",
+    "team": "via SASE",
+    "position": "Software Engineer Intern",
+    "location": "Atlanta, GA",
+    "type": "internship",
+    "year": 2026
+  },
+  {
+    "name": "Bernadette Baroi",
+    "company": "IBM",
+    "team": null,
+    "position": "Hardware Development Intern",
+    "location": "Poughkeepsie, NY",
+    "type": "internship",
+    "year": 2026
+  },
+  {
+    "name": "Ayush Dasgupta",
+    "company": "Johnson & Johnson",
+    "team": null,
+    "position": "Surgical Imaging Intern",
+    "location": "New Brunswick, NJ",
+    "type": "internship",
+    "year": 2026
+  },
+  {
+    "name": "Arvin Azmain",
+    "company": "NYC Economics",
+    "team": null,
+    "position": "Urban Planning Intern",
+    "location": "New York, NY",
+    "type": "internship",
+    "year": 2026
+  },
+  {
+    "name": "Abigail Lee",
+    "company": "Roche",
+    "team": null,
+    "position": "Intern",
+    "location": null,
+    "type": "internship",
+    "year": 2026
+  },
+  {
+    "name": "Alex Mei",
+    "company": "Volvo Group",
+    "team": null,
+    "position": "Strategic Product Planning Intern",
+    "location": "Greensboro, NC",
+    "type": "internship",
+    "year": 2026
+  },
+  {
+    "name": "Caden Autencio",
+    "company": "Zebra Technologies",
+    "team": "CEAT",
+    "position": "Electrical Engineering Intern",
+    "location": "Holtsville, NY",
+    "type": "internship",
+    "year": 2026
+  },
+  {
+    "name": "Prattay Dey",
+    "company": "Amazon",
+    "team": "Amazon Redshift",
+    "position": "Software Engineer Intern",
+    "location": "Palo Alto, CA",
+    "type": "internship",
+    "year": 2025
+  },
+  {
+    "name": "Alex Mei",
+    "company": "Beauty By Imagination",
+    "team": null,
+    "position": "Engineering Lab Intern",
+    "location": "Commack, NY",
+    "type": "internship",
+    "year": 2025
+  },
+  {
+    "name": "Henry Kang",
+    "company": "Brookhaven National Laboratory",
+    "team": null,
+    "position": "Mechanical Engineering Intern",
+    "location": "Upton, NY",
+    "type": "internship",
+    "year": 2025
+  },
+  {
+    "name": "Alvin Kuruvilla",
+    "company": "Entergy",
+    "team": null,
+    "position": "System Engineering Intern",
+    "location": "St. Francisville, LA",
+    "type": "internship",
+    "year": 2025
+  },
+  {
+    "name": "Bianca Talusan",
+    "company": "EQAService",
+    "team": null,
+    "position": "Electro-Mechanical Engineering Intern",
+    "location": "Santa Fe Springs, CA",
+    "type": "internship",
+    "year": 2025
+  },
+  {
+    "name": "Daniel Joung",
+    "company": "GlobalFoundries",
+    "team": null,
+    "position": "Advanced Manufacturing Intern",
+    "location": "Albany, NY",
+    "type": "internship",
+    "year": 2025
+  },
+  {
+    "name": "Shannon McKenna",
+    "company": "Hologic",
+    "team": null,
+    "position": "Regulatory Affairs Intern",
+    "location": "Marlborough, MA",
+    "type": "internship",
+    "year": 2025
+  },
+  {
+    "name": "Jackey Zheng",
+    "company": "L3Harris",
+    "team": "via INROADS",
+    "position": "Electrical Engineering Intern",
+    "location": "Rochester, NY",
+    "type": "internship",
+    "year": 2025
+  },
+  {
+    "name": "Sahus Bhandary",
+    "company": "MetLife",
+    "team": "via INROADS",
+    "position": "Software Development Intern",
+    "location": "Cary, NC",
+    "type": "internship",
+    "year": 2025
+  },
+  {
+    "name": "Nikki Chang",
+    "company": "Pfizer",
+    "team": "Oncology Commercial Analytics (via INROADS)",
+    "position": "Commercial Intern",
+    "location": "New York, NY",
+    "type": "internship",
+    "year": 2025
+  },
+  {
+    "name": "Shayna Halop",
+    "company": "Skanska",
+    "team": null,
+    "position": "Heavy Civil Infrastructure Intern",
+    "location": "Queens, NY",
+    "type": "internship",
+    "year": 2025
+  },
+  {
+    "name": "Tiffany Wang",
+    "company": "Staples",
+    "team": null,
+    "position": "Software Engineer Intern",
+    "location": "Framingham, MA",
+    "type": "internship",
+    "year": 2025
+  },
+  {
+    "name": "Ayush Dasgupta",
+    "company": "Thermo Fisher",
+    "team": null,
+    "position": "Research and Development Intern",
+    "location": "Grand Island, NY",
+    "type": "internship",
+    "year": 2025
+  },
+  {
+    "name": "Abigail Lee",
+    "company": "Tools for Surgery",
+    "team": null,
+    "position": "Engineering Intern",
+    "location": "East Setauket, NY",
+    "type": "internship",
+    "year": 2025
+  },
+  {
+    "name": "Damaris Ferrer",
+    "company": "University of Nebraska",
+    "team": null,
+    "position": "Undergraduate Researcher",
+    "location": "Lincoln, NE",
+    "type": "internship",
+    "year": 2025
+  },
+  {
+    "name": "Ethan Pascual",
+    "company": "Valearnis",
+    "team": null,
+    "position": "AI Developer Intern",
+    "location": "Remote",
+    "type": "internship",
+    "year": 2025
+  },
+  {
+    "name": "Dylan Rock",
+    "company": "Aerosafe Global",
+    "team": null,
+    "position": "Business Analyst",
+    "location": "Rochester, NY",
+    "type": "full-time",
+    "year": 2024
+  },
+  {
+    "name": "Andy Ouyang",
+    "company": "Amazon",
+    "team": null,
+    "position": "Software Developer",
+    "location": "New York, NY",
+    "type": "full-time",
+    "year": 2024
+  },
+  {
+    "name": "Melanie Chio",
+    "company": "Apple",
+    "team": null,
+    "position": "Software Engineer",
+    "location": "San Diego, CA",
+    "type": "full-time",
+    "year": 2024
+  },
+  {
+    "name": "Rendy Tejada",
+    "company": "Apple",
+    "team": null,
+    "position": "Senior Software Engineer",
+    "location": "San Jose, CA",
+    "type": "full-time",
+    "year": 2024
+  },
+  {
+    "name": "Zachary Galella",
+    "company": "Cameron Engineering",
+    "team": null,
+    "position": "Civil Designer I",
+    "location": "Wantagh, NY",
+    "type": "full-time",
+    "year": 2024
+  },
+  {
+    "name": "Michelle Tham",
+    "company": "Capital One",
+    "team": null,
+    "position": "Software Engineer",
+    "location": "Arlington, VA",
+    "type": "full-time",
+    "year": 2024
+  },
+  {
+    "name": "Eric Pressman",
+    "company": "Casino Development Group",
+    "team": null,
+    "position": "Draftsman",
+    "location": "Elmhurst, NY",
+    "type": "full-time",
+    "year": 2024
+  },
+  {
+    "name": "Travis Kwong",
+    "company": "Cathay Bank",
+    "team": null,
+    "position": "AVP, IT Risk Management",
+    "location": "San Diego, CA",
+    "type": "full-time",
+    "year": 2024
+  },
+  {
+    "name": "Aakash Kattelu",
+    "company": "Forward",
+    "team": null,
+    "position": "Software Engineer",
+    "location": "San Francisco, CA",
+    "type": "full-time",
+    "year": 2024
+  },
+  {
+    "name": "Mei Hua Mei",
+    "company": "Gilbane Building Company",
+    "team": null,
+    "position": "Project Engineer",
+    "location": "New York, NY",
+    "type": "full-time",
+    "year": 2024
+  },
+  {
+    "name": "Brian Ton",
+    "company": "Global-E",
+    "team": null,
+    "position": "Solution Architect",
+    "location": "Brooklyn, NY",
+    "type": "full-time",
+    "year": 2024
+  },
+  {
+    "name": "Himanshu Kattelu",
+    "company": "Google",
+    "team": null,
+    "position": "Senior Software Engineer",
+    "location": "Queens, NY",
+    "type": "full-time",
+    "year": 2024
+  },
+  {
+    "name": "Brice Joseph",
+    "company": "Horizon Blue Cross Blue Shield",
+    "team": null,
+    "position": "Cybersecurity Intern",
+    "location": "Newark, NJ",
+    "type": "internship",
+    "year": 2024
+  },
+  {
+    "name": "Qifan Chen",
+    "company": "IBM",
+    "team": null,
+    "position": "Mechanical Qualification Engineer",
+    "location": "Poughkeepsie, NY",
+    "type": "full-time",
+    "year": 2024
+  },
+  {
+    "name": "Shayna Halop",
+    "company": "IMEG",
+    "team": null,
+    "position": "Mechanical/Materials Engineering Intern",
+    "location": "Westbury, NY",
+    "type": "internship",
+    "year": 2024
+  },
+  {
+    "name": "William Zhu",
+    "company": "JPMorgan Chase",
+    "team": null,
+    "position": "Data Operations Associate",
+    "location": "New York, NY",
+    "type": "full-time",
+    "year": 2024
+  },
+  {
+    "name": "Hao Li",
+    "company": "Kulicke & Soffa",
+    "team": null,
+    "position": "Advanced Process / Mechanical Engineer",
+    "location": "Philadelphia, PA",
+    "type": "full-time",
+    "year": 2024
+  },
+  {
+    "name": "Alexandra Lu",
+    "company": "L3Harris",
+    "team": null,
+    "position": "Mechanical Engineer",
+    "location": "Flushing, NY",
+    "type": "full-time",
+    "year": 2024
+  },
+  {
+    "name": "Abigail Lee",
+    "company": "Laerdal",
+    "team": null,
+    "position": "Technical Product Repair Intern",
+    "location": "Wappingers Falls, NY",
+    "type": "internship",
+    "year": 2024
+  },
+  {
+    "name": "Ethan Pascual",
+    "company": "Lavner Education",
+    "team": null,
+    "position": "Information Technology Intern",
+    "location": "Norristown, PA",
+    "type": "internship",
+    "year": 2024
+  },
+  {
+    "name": "Aaron Lee",
+    "company": "Lukka",
+    "team": null,
+    "position": "Senior Technical Lead Engineer",
+    "location": "New York, NY",
+    "type": "full-time",
+    "year": 2024
+  },
+  {
+    "name": "Harry Rajput",
+    "company": "Mastercard",
+    "team": null,
+    "position": "Software Engineer I",
+    "location": "New York, NY",
+    "type": "full-time",
+    "year": 2024
+  },
+  {
+    "name": "Ricky Huynh",
+    "company": "MTA New York City Transit",
+    "team": null,
+    "position": "System Safety Specialist",
+    "location": "New York, NY",
+    "type": "full-time",
+    "year": 2024
+  },
+  {
+    "name": "Terrence Ki",
+    "company": "Northeastern University",
+    "team": null,
+    "position": "Project Manager, Capital Projects",
+    "location": "Boston, MA",
+    "type": "full-time",
+    "year": 2024
+  },
+  {
+    "name": "Justin Xie",
+    "company": "NYC Department of Consumer and Worker Protection",
+    "team": null,
+    "position": "Information Technology Intern",
+    "location": "New York, NY",
+    "type": "internship",
+    "year": 2024
+  },
+  {
+    "name": "Sikai (Shawn) Kang",
+    "company": "Peraton",
+    "team": null,
+    "position": "Systems Engineering Advisor",
+    "location": "New York, NY",
+    "type": "full-time",
+    "year": 2024
+  },
+  {
+    "name": "Celina Yeung",
+    "company": "Procter & Gamble",
+    "team": null,
+    "position": "Product Supply Engineering Intern",
+    "location": "Mehoopany, PA",
+    "type": "internship",
+    "year": 2024
+  },
+  {
+    "name": "Shannon McKenna",
+    "company": "Pursuit Aerospace",
+    "team": null,
+    "position": "Engineering Intern",
+    "location": "Plainville, CT",
+    "type": "internship",
+    "year": 2024
+  },
+  {
+    "name": "Jason Zheng",
+    "company": "Real Estate Board of New York",
+    "team": null,
+    "position": "Information Technology Intern",
+    "location": "New York, NY",
+    "type": "internship",
+    "year": 2024
+  },
+  {
+    "name": "Ayush Dasgupta",
+    "company": "Royal Bank of Canada",
+    "team": null,
+    "position": "Financial Solutions Intern",
+    "location": "Rochester, NY",
+    "type": "internship",
+    "year": 2024
+  },
+  {
+    "name": "Sahus Bhandary",
+    "company": "SAIC",
+    "team": null,
+    "position": "Data Analytics & IT Intern",
+    "location": "Reston, VA",
+    "type": "internship",
+    "year": 2024
+  },
+  {
+    "name": "Brice Joseph",
+    "company": "Santander Bank",
+    "team": null,
+    "position": "Cyber Security Summer Analyst",
+    "location": "New York, NY",
+    "type": "internship",
+    "year": 2024
+  },
+  {
+    "name": "Rachel Huang",
+    "company": "Silman",
+    "team": null,
+    "position": "Structural Engineer",
+    "location": "New York, NY",
+    "type": "full-time",
+    "year": 2024
+  },
+  {
+    "name": "Basim Chowdhury",
+    "company": "Softheon",
+    "team": null,
+    "position": "Senior Software Engineer",
+    "location": "Stamford, CT",
+    "type": "full-time",
+    "year": 2024
+  },
+  {
+    "name": "Nikki Chang",
+    "company": "Syndax Pharmaceuticals",
+    "team": "Analytics",
+    "position": "Commercial Intern",
+    "location": "New York, NY",
+    "type": "internship",
+    "year": 2024
+  },
+  {
+    "name": "Zachary Zysberg",
+    "company": "U.S. Department of Defense",
+    "team": null,
+    "position": "Software Developer",
+    "location": "Arlington, VA",
+    "type": "full-time",
+    "year": 2024
+  },
+  {
+    "name": "Oliver Chen",
+    "company": "Uncommon Goods",
+    "team": null,
+    "position": "Systems Administrator",
+    "location": "Brooklyn, NY",
+    "type": "full-time",
+    "year": 2024
+  },
+  {
+    "name": "Holy Cheong",
+    "company": "United States Air Force",
+    "team": null,
+    "position": "Captain",
+    "location": null,
+    "type": "full-time",
+    "year": 2024
+  },
+  {
+    "name": "Alexandra Jeong",
+    "company": "Zocdoc",
+    "team": null,
+    "position": "Software Developer",
+    "location": "Brooklyn, NY",
+    "type": "full-time",
+    "year": 2024
+  },
+  {
+    "name": "Fariah Sultana",
+    "company": "American National",
+    "team": null,
+    "position": "Facilities/Record Management Assistant Intern",
+    "location": null,
+    "type": "internship",
+    "year": 2023
+  },
+  {
+    "name": "Brice Joseph",
+    "company": "Blue Cross Blue Shield",
+    "team": null,
+    "position": "Cybersecurity Intern",
+    "location": null,
+    "type": "internship",
+    "year": 2023
+  },
+  {
+    "name": "Shannon McKenna",
+    "company": "CooperSurgical",
+    "team": null,
+    "position": "Manufacturing Engineer Intern",
+    "location": "Trumbull, CT",
+    "type": "internship",
+    "year": 2023
+  },
+  {
+    "name": "Gary Liu",
+    "company": "Gilbane Building Company",
+    "team": null,
+    "position": "Construction Intern II",
+    "location": null,
+    "type": "internship",
+    "year": 2023
+  },
+  {
+    "name": "Sayan Shil",
+    "company": "GlaxoSmithKline",
+    "team": null,
+    "position": "Medicinal Chemistry Intern",
+    "location": null,
+    "type": "internship",
+    "year": 2023
+  },
+  {
+    "name": "Lucy Cleveland",
+    "company": "HNTB",
+    "team": null,
+    "position": "Project Management Intern",
+    "location": null,
+    "type": "internship",
+    "year": 2023
+  },
+  {
+    "name": "Jenny Yang",
+    "company": "MarketAxess",
+    "team": null,
+    "position": "Software Engineer Intern",
+    "location": null,
+    "type": "internship",
+    "year": 2023
+  },
+  {
+    "name": "Jake Papaspiridakos",
+    "company": "Walmart Global Tech",
+    "team": null,
+    "position": "Software Engineer Intern",
+    "location": null,
+    "type": "internship",
+    "year": 2023
+  },
+  {
+    "name": "Joanna Lao",
+    "company": "Allobee",
+    "team": "Software",
+    "position": "Front-End Engineer Intern",
+    "location": "New York, NY",
+    "type": "internship",
+    "year": 2021
+  },
+  {
+    "name": "Mateo Choi",
+    "company": "Amazon",
+    "team": null,
+    "position": "Software Engineer",
+    "location": "San Diego, CA",
+    "type": "full-time",
+    "year": 2021
+  },
+  {
+    "name": "Will Zhu",
+    "company": "Amazon",
+    "team": "Amazon Logistics",
+    "position": "Operations Area Manager",
+    "location": "New Windsor, NY",
+    "type": "full-time",
+    "year": 2021
+  },
+  {
+    "name": "Shivani Sharma",
+    "company": "AT&T",
+    "team": "Software",
+    "position": "Technical Business Manager Intern",
+    "location": "Chicago, IL",
+    "type": "internship",
+    "year": 2021
+  },
+  {
+    "name": "Mei Hua Mei",
+    "company": "Bechtel Corporation",
+    "team": "Uranium Processing Facility",
+    "position": "Project Controls Intern",
+    "location": "Oak Ridge, TN",
+    "type": "internship",
+    "year": 2021
+  },
+  {
+    "name": "Vivian Yee",
+    "company": "Better Holdco",
+    "team": "Software",
+    "position": "Software Engineer Intern",
+    "location": "Remote",
+    "type": "internship",
+    "year": 2021
+  },
+  {
+    "name": "Joey Jiemjitpolchai",
+    "company": "Bloomberg LP",
+    "team": "Trading Systems Infrastructure",
+    "position": "Software Engineer",
+    "location": "New York, NY",
+    "type": "full-time",
+    "year": 2021
+  },
+  {
+    "name": "Harrison Chen",
+    "company": "Boeing",
+    "team": "Weapons",
+    "position": "Manufacturing Engineer Intern",
+    "location": "St. Louis, MO",
+    "type": "internship",
+    "year": 2021
+  },
+  {
+    "name": "Qifan Chen",
+    "company": "Boston Scientific",
+    "team": "Mechanical",
+    "position": "Engineering Intern",
+    "location": "Maple Grove, MN",
+    "type": "internship",
+    "year": 2021
+  },
+  {
+    "name": "Thomas Manoka",
+    "company": "Boston Scientific",
+    "team": "RM Commercial IT",
+    "position": "Software Engineer Intern",
+    "location": "Malborough, MA",
+    "type": "internship",
+    "year": 2021
+  },
+  {
+    "name": "Arianna Jiang",
+    "company": "Brookhaven National Laboratory",
+    "team": "Data Center PUE Enhancement",
+    "position": "Computer Technology Intern",
+    "location": "Upton, NY",
+    "type": "internship",
+    "year": 2021
+  },
+  {
+    "name": "Michelle Tham",
+    "company": "Capital One",
+    "team": "Digital Customer Experience",
+    "position": "TIP Software Engineer Intern",
+    "location": "McLean, VA",
+    "type": "internship",
+    "year": 2021
+  },
+  {
+    "name": "Melanie Chio",
+    "company": "Citi",
+    "team": "Treasury and Trade Solutions Technology",
+    "position": "ICG Summer Technology Analyst",
+    "location": "New York, NY",
+    "type": "internship",
+    "year": 2021
+  },
+  {
+    "name": "Christina Chau",
+    "company": "Comcast",
+    "team": "Software",
+    "position": "Technology Intern",
+    "location": "Remote",
+    "type": "internship",
+    "year": 2021
+  },
+  {
+    "name": "Chris Kang",
+    "company": "CVS",
+    "team": "Pharmaceutical",
+    "position": "Pharmacy Technician",
+    "location": "Syosset, NY",
+    "type": "internship",
+    "year": 2021
+  },
+  {
+    "name": "Jenny Xu",
+    "company": "Meta",
+    "team": "Software",
+    "position": "Software Engineer",
+    "location": "New York, NY",
+    "type": "full-time",
+    "year": 2026
+  },
+  {
+    "name": "Zi Jing Wong",
+    "company": "GE Aviation",
+    "team": "Engine Systems Group",
+    "position": "Technical Intern",
+    "location": "Lynn, MA",
+    "type": "internship",
+    "year": 2021
+  },
+  {
+    "name": "Billy Luy",
+    "company": "General Motors",
+    "team": null,
+    "position": "Software Engineer",
+    "location": "Michigan",
+    "type": "full-time",
+    "year": 2021
+  },
+  {
+    "name": "Jahnavi Arora",
+    "company": "Goldman Sachs",
+    "team": "Risk",
+    "position": "Engineering Analyst Intern",
+    "location": "Dallas, TX",
+    "type": "internship",
+    "year": 2021
+  },
+  {
+    "name": "Gianmaria Biselli",
+    "company": "GrooveDigital",
+    "team": "FitClass",
+    "position": "Software Engineer",
+    "location": "Remote",
+    "type": "internship",
+    "year": 2021
+  },
+  {
+    "name": "Arianna Jiang",
+    "company": "Johnson & Johnson",
+    "team": "DePuy Synthes",
+    "position": "EM Manufacturing Co-Op",
+    "location": "Warsaw, IN",
+    "type": "internship",
+    "year": 2021
+  },
+  {
+    "name": "Jack Jiang",
+    "company": "JPMorgan Chase",
+    "team": "Corporate and Investment Bank / CiB Project Management",
+    "position": "Analyst Intern",
+    "location": "Wilmington, DW",
+    "type": "internship",
+    "year": 2021
+  },
+  {
+    "name": "Logan Lao",
+    "company": "Kautex Textron",
+    "team": "Manufacturing",
+    "position": "Manufacturing Engineering Intern",
+    "location": "Fort Wayne, IN",
+    "type": "internship",
+    "year": 2021
+  },
+  {
+    "name": "Alexandra Lu",
+    "company": "L3Harris",
+    "team": null,
+    "position": "Systems Engineer",
+    "location": "Hauppauge, NY",
+    "type": "full-time",
+    "year": 2021
+  },
+  {
+    "name": "Cynthia Cambareri",
+    "company": "L3Harris",
+    "team": null,
+    "position": "Quality Engineer",
+    "location": "Hauppauge, NY",
+    "type": "full-time",
+    "year": 2021
+  },
+  {
+    "name": "Michael Gentile",
+    "company": "L3Harris",
+    "team": null,
+    "position": "Mechanical Engineer",
+    "location": "Melbourne, FL",
+    "type": "full-time",
+    "year": 2021
+  },
+  {
+    "name": "Kevin Zhou",
+    "company": "Medin Technologies",
+    "team": null,
+    "position": "Quality/Manufacturing Engineer",
+    "location": "New Brunswick, NJ",
+    "type": "full-time",
+    "year": 2021
+  },
+  {
+    "name": "Kaitlyn Chua",
+    "company": "Medtronic",
+    "team": "Medtronic Neuroscience Devices",
+    "position": "Quality Engineer Intern",
+    "location": "Minneapolis, MN",
+    "type": "internship",
+    "year": 2021
+  },
+  {
+    "name": "Hao Li",
+    "company": "National Science Foundation",
+    "team": "Nano-Structural Materials",
+    "position": "Research Assistant",
+    "location": "Remote",
+    "type": "internship",
+    "year": 2021
+  },
+  {
+    "name": "Rachel Huang",
+    "company": "Skanska",
+    "team": "Construction",
+    "position": "Engineering Intern",
+    "location": "New York, NY",
+    "type": "internship",
+    "year": 2021
+  },
+  {
+    "name": "Sean Zhou",
+    "company": "Something Digital",
+    "team": null,
+    "position": "Software Engineer",
+    "location": "New York, NY",
+    "type": "full-time",
+    "year": 2021
+  },
+  {
+    "name": "Abir Ahmed",
+    "company": "UnitedHealth Group",
+    "team": "Human Capital",
+    "position": "Business Analyst Intern",
+    "location": "Washington DC",
+    "type": "internship",
+    "year": 2021
+  },
+  {
+    "name": "Joice Fan",
+    "company": "UnitedHealth Group",
+    "team": "Optum",
+    "position": "IT Intern",
+    "location": "Washington DC",
+    "type": "internship",
+    "year": 2021
+  },
+  {
+    "name": "Nicholas Leong",
+    "company": "Wells Fargo",
+    "team": "Software",
+    "position": "Technology Analyst Intern",
+    "location": "Charlotte, NC",
+    "type": "internship",
+    "year": 2021
+  },
+  {
+    "name": "Joanna Lao",
+    "company": "Xplorepass",
+    "team": "Software",
+    "position": "Software Engineer Intern",
+    "location": "New York, NY",
+    "type": "internship",
+    "year": 2021
+  },
+  {
+    "name": "Amaan Abubakar",
+    "company": "Amazon",
+    "team": null,
+    "position": "Software Engineer Intern",
+    "location": "Mountain View, CA",
+    "type": "internship",
+    "year": 2026
+  },
+  {
+    "name": "Samuel Kotlyar",
+    "company": "Lendbuzz",
+    "team": null,
+    "position": "Software Engineer",
+    "location": "Boston, MA",
+    "type": "full-time",
+    "year": 2026
+  },
+  {
+    "name": "Anna Wu Lee",
+    "company": "TC Electric / IOVINO",
+    "team": null,
+    "position": "Senior Project Engineer",
+    "location": "New York, NY",
+    "type": "full-time",
+    "year": 2026
+  },
+  {
+    "name": "Benjamin Huang",
+    "company": "Tripadvisor",
+    "team": null,
+    "position": "Cloud Security Engineer",
+    "location": "New York, NY",
+    "type": "full-time",
+    "year": 2026
+  },
+  {
+    "name": "David Zhao",
+    "company": "Capital One",
+    "team": null,
+    "position": "Software Engineer",
+    "location": "New York, NY",
+    "type": "full-time",
+    "year": 2026
+  },
+  {
+    "name": "Ishan Sethi",
+    "company": "Amazon",
+    "team": null,
+    "position": "Software Engineer",
+    "location": "New York, NY",
+    "type": "full-time",
+    "year": 2026
+  },
+  {
+    "name": "Jissie Lin",
+    "company": "Hawkins Delafield & Wood",
+    "team": null,
+    "position": "Financial Analyst",
+    "location": "New York, NY",
+    "type": "full-time",
+    "year": 2026
+  },
+  {
+    "name": "Joey Jiemjitpolchai",
+    "company": "Zendesk",
+    "team": null,
+    "position": "Software Engineer II",
+    "location": "New York, NY",
+    "type": "full-time",
+    "year": 2026
+  },
+  {
+    "name": "Kaitlyn Chua",
+    "company": "Abbott",
+    "team": null,
+    "position": "Clinical Specialist",
+    "location": "New York, NY",
+    "type": "full-time",
+    "year": 2026
+  },
+  {
+    "name": "Ping Liang",
+    "company": "Northrop Grumman",
+    "team": null,
+    "position": "Mechanical Designer",
+    "location": "New York, NY",
+    "type": "full-time",
+    "year": 2026
+  },
+  {
+    "name": "Sean Zhou",
+    "company": "Major League Baseball",
+    "team": null,
+    "position": "Software Engineer",
+    "location": "Flushing, NY",
+    "type": "full-time",
+    "year": 2026
+  },
+  {
+    "name": "Celina Yeung",
+    "company": "Procter & Gamble",
+    "team": null,
+    "position": "Technical Engineer",
+    "location": "Scranton, PA",
+    "type": "full-time",
+    "year": 2026
+  }
+]

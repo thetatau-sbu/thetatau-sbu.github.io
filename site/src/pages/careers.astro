@@ -1,0 +1,105 @@
+---
+import Base from '../layouts/Base.astro';
+import { careers, companies, headlineCompanies } from '../lib/data';
+const latestYear = Math.max(...careers.map((c) => c.year));
+// Most recent year first; within a year, the order in careers.json (stable sort).
+const roles = careers.slice().sort((a, b) => b.year - a.year);
+const typeLabel = (t: string) => (t === 'full-time' ? 'Full-time' : t.charAt(0).toUpperCase() + t.slice(1));
+---
+<Base title="Careers" sheet="Careers" description="Where Theta Tau brothers at Stony Brook have interned and worked.">
+  <section class="col sec">
+    <h1>Where we work</h1>
+    <p class="lede intro">Internships and full-time roles our brothers have held, as reported by brothers. Updated through {latestYear}.</p>
+  </section>
+
+  <section class="col sec">
+    <h2 class="h">Companies</h2>
+    <p class="small">{companies.length} companies, {careers.length} roles reported.</p>
+    <ul class="headline">
+      {headlineCompanies.map((c) => (
+        <li>
+          <span class="plate name">{c.name}</span>
+          <span class="meta">{c.roles} {c.roles === 1 ? 'role' : 'roles'}, {c.years}</span>
+        </li>
+      ))}
+    </ul>
+    <div class="all">
+      <p class="small">All companies, A to Z.</p>
+      <ul class="wall">{companies.map((c) => <li>{c}</li>)}</ul>
+    </div>
+  </section>
+
+  <section class="col sec">
+    <h2 class="h">Roles</h2>
+    <table class="tbl">
+      <thead>
+        <tr><th scope="col">Company</th><th scope="col">Role</th><th scope="col">Brother</th><th scope="col">Location</th><th scope="col">Year</th><th scope="col">Type</th></tr>
+      </thead>
+      <tbody>
+        {roles.map((c) => (
+          <tr>
+            <td data-label="Company">{c.company}</td>
+            <td data-label="Role">{c.position}{c.team && <span class="tbl-sub">{c.team}</span>}</td>
+            <td data-label="Brother">{c.name}</td>
+            <td data-label="Location">{c.location ?? '—'}</td>
+            <td data-label="Year">{c.year}</td>
+            <td data-label="Type">{typeLabel(c.type)}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </section>
+</Base>
+
+<style>
+  .intro { margin-top: clamp(20px, 2vw, 36px); }
+
+  /* Headline tier (src/data/companies.json). The rules are the list's fill showing through 1px gaps between
+     black cells; padding-box keeps that fill out from under the outer border, so all rules match.
+     grid-auto-rows: 1fr makes every row as tall as the tallest, so the rows line up. */
+  .headline {
+    list-style: none; margin: 20px 0 0; padding: 0;
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 1fr; gap: 1px;
+    background: var(--rule); background-clip: padding-box; border: 1px solid var(--rule);
+  }
+  @media (min-width: 700px) { .headline { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  @media (min-width: 1100px) { .headline { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+  .headline li {
+    container-type: inline-size;
+    min-height: clamp(112px, 8vw, 152px);
+    padding: clamp(18px, 1.6vw, 28px) clamp(16px, 1.4vw, 24px);
+    background: var(--sheet, #000);
+  }
+  /* Never more than an eighth of the cell (12.5cqi): the longest word, BROOKHAVEN, is about 7.85em wide,
+     so on phones the names shrink until it fits. From about 430px up the clamp alone applies. */
+  .name { display: block; font-size: min(clamp(20px, 1.5vw, 30px), 12.5cqi); line-height: 1.05; color: var(--text); }
+  .meta { display: block; margin-top: 10px; font-size: 14px; line-height: 1.45; color: var(--text-2); }
+  @media (min-width: 1600px) { .meta { font-size: 15px; } }
+  /* A short last row: its last cell spans the empty columns, so no fill shows there. */
+  @media (max-width: 699px) {
+    .headline li:last-child:nth-child(2n+1) { grid-column: span 2; }
+  }
+  @media (min-width: 700px) and (max-width: 1099px) {
+    .headline li:last-child:nth-child(3n+1) { grid-column: span 3; }
+    .headline li:last-child:nth-child(3n+2) { grid-column: span 2; }
+  }
+  @media (min-width: 1100px) {
+    .headline li:last-child:nth-child(4n+1) { grid-column: span 4; }
+    .headline li:last-child:nth-child(4n+2) { grid-column: span 3; }
+    .headline li:last-child:nth-child(4n+3) { grid-column: span 2; }
+  }
+
+  /* The wall: every company, A to Z. */
+  .all { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--rule); }
+  .all .small { margin-bottom: 16px; }
+  .wall { list-style: none; margin: 0; padding: 0; column-count: 2; column-gap: 32px; }
+  .wall li {
+    break-inside: avoid; padding: 6px 0;
+    font-family: var(--font-text); font-weight: 600; font-size: 15px; line-height: 1.3;
+    text-transform: uppercase; letter-spacing: 0.05em; color: var(--text);
+  }
+  @media (min-width: 900px) { .wall { column-count: 3; } }
+  @media (min-width: 1100px) { .wall { column-count: 4; } }
+  @media (min-width: 1600px) { .wall { column-count: 5; } .wall li { font-size: 16px; } }
+  @media (max-width: 599px) { .wall li { font-size: 14px; letter-spacing: 0.04em; } }
+</style>

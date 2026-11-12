@@ -1,0 +1,1862 @@
+[
+  {
+    "id": "ali-islam",
+    "name": "Ali Islam",
+    "pledgeClass": "Founders",
+    "gradYear": 2015,
+    "major": "Engineering Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/ali-islam-59361580/",
+    "photo": "ali-islam.jpg"
+  },
+  {
+    "id": "anna-wu",
+    "name": "Anna Wu",
+    "pledgeClass": "Founders",
+    "gradYear": 2014,
+    "major": "Mechanical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/anna-wu-7709aa76/",
+    "photo": "anna-wu.jpg"
+  },
+  {
+    "id": "david-wang",
+    "name": "David Wang",
+    "pledgeClass": "Founders",
+    "gradYear": 2015,
+    "major": "Engineering Science / Applied Mathematics & Statistics",
+    "status": "alumni",
+    "linkedin": null,
+    "photo": "david-wang.jpg"
+  },
+  {
+    "id": "eric-zhuo",
+    "name": "Eric Zhuo",
+    "pledgeClass": "Founders",
+    "gradYear": 2014,
+    "major": "Biology",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/eric-z-488b4786/",
+    "photo": "eric-zhuo.jpg"
+  },
+  {
+    "id": "jimmy-lee",
+    "name": "Jimmy Lee",
+    "pledgeClass": "Founders",
+    "gradYear": 2015,
+    "major": "Engineering Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/jimmylee92/",
+    "photo": "jimmy-lee.jpg"
+  },
+  {
+    "id": "mary-otoole",
+    "name": "Mary O’Toole",
+    "pledgeClass": "Founders",
+    "gradYear": 2016,
+    "major": "Mechanical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/mary-o-toole-15536429/",
+    "photo": "mary-otoole.jpg"
+  },
+  {
+    "id": "oliver-chen",
+    "name": "Oliver Chen",
+    "pledgeClass": "Founders",
+    "gradYear": 2016,
+    "major": "Chemistry",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/oliverchen217/",
+    "photo": "oliver-chen.jpg"
+  },
+  {
+    "id": "quintin-eng",
+    "name": "Quintin Eng",
+    "pledgeClass": "Founders",
+    "gradYear": 2015,
+    "major": "Biomedical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/quintin-eng-33987351/",
+    "photo": "quintin-eng.jpg"
+  },
+  {
+    "id": "rendy-tajada",
+    "name": "Rendy Tejada",
+    "pledgeClass": "Founders",
+    "gradYear": 2014,
+    "major": "Mechanical Engineering / Applied Mathematics & Statistics",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/rendy-tejada/",
+    "photo": "rendy-tajada.jpg"
+  },
+  {
+    "id": "sikai-shawn-kang",
+    "name": "Sikai (Shawn) Kang",
+    "pledgeClass": "Founders",
+    "gradYear": 2014,
+    "major": "Electrical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/sikai-shawn-kang-a5255154/",
+    "photo": "sikai-shawn-kang.jpg"
+  },
+  {
+    "id": "vincent-lock",
+    "name": "Vincent Lock",
+    "pledgeClass": "Founders",
+    "gradYear": 2014,
+    "major": "Electrical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/vincentlock/",
+    "photo": "vincent-lock.jpg"
+  },
+  {
+    "id": "yuwei-wang",
+    "name": "Yuwei Wang",
+    "pledgeClass": "Founders",
+    "gradYear": 2015,
+    "major": "Engineering Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/wyuwei92/",
+    "photo": "yuwei-wang.jpg"
+  },
+  {
+    "id": "andy-chu",
+    "name": "Andy Chu",
+    "pledgeClass": "Alpha",
+    "gradYear": 2017,
+    "major": "Mechanical Engineering",
+    "status": "alumni",
+    "linkedin": null,
+    "photo": "andy-chu.jpg"
+  },
+  {
+    "id": "benjamin-qiu",
+    "name": "Benjamin Qiu",
+    "pledgeClass": "Alpha",
+    "gradYear": 2015,
+    "major": "Engineering Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/qiubenjamin/",
+    "photo": "benjamin-qiu.jpg"
+  },
+  {
+    "id": "brian-ton",
+    "name": "Brian Ton",
+    "pledgeClass": "Alpha",
+    "gradYear": 2016,
+    "major": "Technological Systems Management",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/tonbrian/",
+    "photo": "brian-ton.jpg"
+  },
+  {
+    "id": "dianchen-jiang",
+    "name": "Dianchen Jiang",
+    "pledgeClass": "Alpha",
+    "gradYear": 2015,
+    "major": "Computer Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/dianchen-jiang-18441783/",
+    "photo": "dianchen-jiang.jpg"
+  },
+  {
+    "id": "edward-qiu",
+    "name": "Edward Qiu",
+    "pledgeClass": "Alpha",
+    "gradYear": 2016,
+    "major": "Mechanical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/edward-qiu/",
+    "photo": "edward-qiu.jpg"
+  },
+  {
+    "id": "may-lim",
+    "name": "May Lim",
+    "pledgeClass": "Alpha",
+    "gradYear": 2016,
+    "major": "Technological Systems Management",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/maylenglim/",
+    "photo": "may-lim.jpg"
+  },
+  {
+    "id": "naomasa-miki",
+    "name": "Naomasa Miki",
+    "pledgeClass": "Alpha",
+    "gradYear": 2015,
+    "major": "Engineering Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/naomasa-miki-23513964/",
+    "photo": "naomasa-miki.jpg"
+  },
+  {
+    "id": "nathan-wong",
+    "name": "Nathan Wong",
+    "pledgeClass": "Alpha",
+    "gradYear": 2016,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/nathan-wong-010a9684/",
+    "photo": "nathan-wong.jpg"
+  },
+  {
+    "id": "vincent-moy",
+    "name": "Vincent Moy",
+    "pledgeClass": "Alpha",
+    "gradYear": 2015,
+    "major": "Chemical & Molecular Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/vincentmoy92/",
+    "photo": "vincent-moy.jpg"
+  },
+  {
+    "id": "aaron-lee",
+    "name": "Aaron Lee",
+    "pledgeClass": "Beta",
+    "gradYear": 2015,
+    "major": "Biomedical Engineering / Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/leeaaron29527/",
+    "photo": "aaron-lee.jpg"
+  },
+  {
+    "id": "eric-pressman",
+    "name": "Eric Pressman",
+    "pledgeClass": "Beta",
+    "gradYear": 2016,
+    "major": "Mechanical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/eric-pressman-64613892/",
+    "photo": "eric-pressman.jpg"
+  },
+  {
+    "id": "ricky-huynh",
+    "name": "Ricky Huynh",
+    "pledgeClass": "Beta",
+    "gradYear": 2017,
+    "major": "Mechanical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/ricky-huynh-261aaa84/",
+    "photo": "ricky-huynh.jpg"
+  },
+  {
+    "id": "ryan-stahl",
+    "name": "Ryan Stahl",
+    "pledgeClass": "Beta",
+    "gradYear": 2015,
+    "major": "Mechanical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/ryan-stahl-52266394/",
+    "photo": "ryan-stahl.jpg"
+  },
+  {
+    "id": "calvin-lin",
+    "name": "Calvin Lin",
+    "pledgeClass": "Gamma",
+    "gradYear": 2017,
+    "major": "Mechanical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/calvinklin/",
+    "photo": "calvin-lin.jpg"
+  },
+  {
+    "id": "daniel-cao",
+    "name": "Daniel Cao",
+    "pledgeClass": "Gamma",
+    "gradYear": 2017,
+    "major": "Computer Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/daniel-cao-2a6642a5/",
+    "photo": "daniel-cao.jpg"
+  },
+  {
+    "id": "holy-cheong",
+    "name": "Holy Cheong",
+    "pledgeClass": "Gamma",
+    "gradYear": 2018,
+    "major": "Civil Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/holyjcheong/",
+    "photo": "holy-cheong.jpg"
+  },
+  {
+    "id": "jean-choe",
+    "name": "Jean Choe",
+    "pledgeClass": "Gamma",
+    "gradYear": 2017,
+    "major": "Biomedical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/jean-choe-20464ba5/",
+    "photo": "jean-choe.jpg"
+  },
+  {
+    "id": "phit-ahn",
+    "name": "Phit Ahn",
+    "pledgeClass": "Gamma",
+    "gradYear": 2017,
+    "major": "Technological Systems Management",
+    "status": "alumni",
+    "linkedin": null,
+    "photo": "phit-ahn.jpg"
+  },
+  {
+    "id": "richard-pak",
+    "name": "Richard Pak",
+    "pledgeClass": "Gamma",
+    "gradYear": 2017,
+    "major": "Engineering Science",
+    "status": "alumni",
+    "linkedin": null,
+    "photo": "richard-pak.jpg"
+  },
+  {
+    "id": "sik-ho-wong",
+    "name": "Sik-Ho Wong",
+    "pledgeClass": "Gamma",
+    "gradYear": 2016,
+    "major": "Computer Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/sik-ho-wong-ab83105a/",
+    "photo": "sik-ho-wong.jpg"
+  },
+  {
+    "id": "theodore-graves",
+    "name": "Theodore Graves",
+    "pledgeClass": "Gamma",
+    "gradYear": 2017,
+    "major": "Electrical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/thgraves32/",
+    "photo": "theodore-graves.jpg"
+  },
+  {
+    "id": "brian-he",
+    "name": "Brian He",
+    "pledgeClass": "Delta",
+    "gradYear": 2018,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": null,
+    "photo": "brian-he.jpg"
+  },
+  {
+    "id": "dana-capitano",
+    "name": "Dana Capitano",
+    "pledgeClass": "Delta",
+    "gradYear": 2018,
+    "major": "Chemical & Molecular Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/danaacapitano/",
+    "photo": "dana-capitano.jpg"
+  },
+  {
+    "id": "david-ngo",
+    "name": "David Ngo",
+    "pledgeClass": "Delta",
+    "gradYear": 2017,
+    "major": "Biomedical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/davidngo95/",
+    "photo": "david-ngo.jpg"
+  },
+  {
+    "id": "derek-hu",
+    "name": "Derek Hu",
+    "pledgeClass": "Delta",
+    "gradYear": 2018,
+    "major": "Mechanical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/jhu6740/",
+    "photo": "derek-hu.jpg"
+  },
+  {
+    "id": "justin-cohen",
+    "name": "Justin Cohen",
+    "pledgeClass": "Delta",
+    "gradYear": 2018,
+    "major": "Engineering Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/justin-cohen-13b03bb8/",
+    "photo": "justin-cohen.jpg"
+  },
+  {
+    "id": "mie-higuichi",
+    "name": "Mie Higuichi",
+    "pledgeClass": "Delta",
+    "gradYear": 2017,
+    "major": "Engineering Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/mie-higuchi-b4477a1a2/",
+    "photo": "mie-higuichi.jpg"
+  },
+  {
+    "id": "nancy-zhen",
+    "name": "Nancy Zhen",
+    "pledgeClass": "Delta",
+    "gradYear": 2017,
+    "major": "Chemical & Molecular Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/nancyzhen/",
+    "photo": "nancy-zhen.jpg"
+  },
+  {
+    "id": "nick-lombardi",
+    "name": "Nick Lombardi",
+    "pledgeClass": "Delta",
+    "gradYear": 2018,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/nick-lombardi-85b384126/",
+    "photo": "nick-lombardi.jpg"
+  },
+  {
+    "id": "peng-zhong",
+    "name": "Peng Zhong",
+    "pledgeClass": "Delta",
+    "gradYear": 2018,
+    "major": "Electrical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/pengzhong123/",
+    "photo": "peng-zhong.jpg"
+  },
+  {
+    "id": "rohan-kingan",
+    "name": "Rohan Kingan",
+    "pledgeClass": "Delta",
+    "gradYear": 2017,
+    "major": "Technological Systems Management",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/rdk1207/",
+    "photo": "rohan-kingan.jpg"
+  },
+  {
+    "id": "travis-kwong",
+    "name": "Travis Kwong",
+    "pledgeClass": "Delta",
+    "gradYear": 2018,
+    "major": "Computer Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/tk9604/",
+    "photo": "travis-kwong.jpg"
+  },
+  {
+    "id": "urias-soto",
+    "name": "Urias Soto",
+    "pledgeClass": "Delta",
+    "gradYear": 2018,
+    "major": "Civil Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/usoto/",
+    "photo": "urias-soto.jpg"
+  },
+  {
+    "id": "andrew-au-yeung",
+    "name": "Andrew Au Yeung",
+    "pledgeClass": "Epsilon",
+    "gradYear": 2019,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/andrewauyeung/",
+    "photo": "andrew-au-yeung.jpg"
+  },
+  {
+    "id": "benny-lin",
+    "name": "Benny Lin",
+    "pledgeClass": "Epsilon",
+    "gradYear": 2018,
+    "major": "Mechanical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/bennylin1022/",
+    "photo": "benny-lin.jpg"
+  },
+  {
+    "id": "chap-long-lau",
+    "name": "Chap-Long Lau",
+    "pledgeClass": "Epsilon",
+    "gradYear": 2018,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/chaplonglau/",
+    "photo": "chap-long-lau.jpg"
+  },
+  {
+    "id": "david-wu",
+    "name": "David Wu",
+    "pledgeClass": "Epsilon",
+    "gradYear": 2018,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": null,
+    "photo": "david-wu.jpg"
+  },
+  {
+    "id": "ping-liang",
+    "name": "Ping Liang",
+    "pledgeClass": "Epsilon",
+    "gradYear": 2018,
+    "major": "Mechanical Engineering",
+    "status": "alumni",
+    "linkedin": null,
+    "photo": "ping-liang.jpg"
+  },
+  {
+    "id": "riley-wong",
+    "name": "Riley Wong",
+    "pledgeClass": "Epsilon",
+    "gradYear": 2018,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/rileywong13/",
+    "photo": "riley-wong.jpg"
+  },
+  {
+    "id": "terrence-ki",
+    "name": "Terrence Ki",
+    "pledgeClass": "Epsilon",
+    "gradYear": 2018,
+    "major": "Civil Engineering",
+    "status": "alumni",
+    "linkedin": null,
+    "photo": "terrence-ki.jpg"
+  },
+  {
+    "id": "abrar-taseen",
+    "name": "Abrar Taseen",
+    "pledgeClass": "Zeta",
+    "gradYear": 2020,
+    "major": "Electrical Engineering / Applied Mathematics & Statistics",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/abrartaseen/",
+    "photo": "abrar-taseen.jpg"
+  },
+  {
+    "id": "anna-lawrence",
+    "name": "Anna Lawrence",
+    "pledgeClass": "Zeta",
+    "gradYear": 2019,
+    "major": "Engineering Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/anna-r-lawrence/",
+    "photo": "anna-lawrence.jpg"
+  },
+  {
+    "id": "himanshu-kattelu",
+    "name": "Himanshu Kattelu",
+    "pledgeClass": "Zeta",
+    "gradYear": 2018,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/himanshukattelu/",
+    "photo": "himanshu-kattelu.jpg"
+  },
+  {
+    "id": "spencer-hsu",
+    "name": "Spencer Hsu",
+    "pledgeClass": "Zeta",
+    "gradYear": 2019,
+    "major": "Mechanical Engineering",
+    "status": "alumni",
+    "linkedin": null,
+    "photo": "spencer-hsu.jpg"
+  },
+  {
+    "id": "valerie-chin",
+    "name": "Valerie Chin",
+    "pledgeClass": "Zeta",
+    "gradYear": 2019,
+    "major": "Engineering Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/valerie-chin/",
+    "photo": "valerie-chin.jpg"
+  },
+  {
+    "id": "dylan-trott",
+    "name": "Dylan Trott",
+    "pledgeClass": "Eta",
+    "gradYear": 2019,
+    "major": "Electrical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/dylantrottsbu/",
+    "photo": "dylan-trott.jpg"
+  },
+  {
+    "id": "justin-seetaram",
+    "name": "Justin Seetaram",
+    "pledgeClass": "Eta",
+    "gradYear": 2018,
+    "major": "Chemical & Molecular Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/justin-seetaram-87958419b/",
+    "photo": "justin-seetaram.jpg"
+  },
+  {
+    "id": "kevin-tran",
+    "name": "Kevin Tran",
+    "pledgeClass": "Eta",
+    "gradYear": 2019,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/kevintran96/",
+    "photo": "kevin-tran.jpg"
+  },
+  {
+    "id": "weibin-gu",
+    "name": "Weibin Gu",
+    "pledgeClass": "Eta",
+    "gradYear": 2019,
+    "major": "Mechanical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/weibingu/",
+    "photo": "weibin-gu.jpg"
+  },
+  {
+    "id": "aakash-kattelu",
+    "name": "Aakash Kattelu",
+    "pledgeClass": "Theta",
+    "gradYear": 2019,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": null,
+    "photo": "aakash-kattelu.jpg"
+  },
+  {
+    "id": "amy-shin",
+    "name": "Amy Shin",
+    "pledgeClass": "Theta",
+    "gradYear": 2020,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/amyeshin/",
+    "photo": "amy-shin.jpg"
+  },
+  {
+    "id": "andrew-moy",
+    "name": "Andrew Moy",
+    "pledgeClass": "Theta",
+    "gradYear": 2020,
+    "major": "Business Administration & Management",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/andrewmoy/",
+    "photo": "andrew-moy.jpg"
+  },
+  {
+    "id": "cynthia-cambareri",
+    "name": "Cynthia Cambareri",
+    "pledgeClass": "Theta",
+    "gradYear": 2020,
+    "major": "Mechanical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/cyncambareri/",
+    "photo": "cynthia-cambareri.jpg"
+  },
+  {
+    "id": "eldon-lu",
+    "name": "Eldon Lu",
+    "pledgeClass": "Theta",
+    "gradYear": 2019,
+    "major": "Chemical & Molecular Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/eldonlu/",
+    "photo": "eldon-lu.jpg"
+  },
+  {
+    "id": "han-zhao",
+    "name": "Han Zhao",
+    "pledgeClass": "Theta",
+    "gradYear": 2019,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/hazzhao/",
+    "photo": "han-zhao.jpg"
+  },
+  {
+    "id": "ishan-sethi",
+    "name": "Ishan Sethi",
+    "pledgeClass": "Theta",
+    "gradYear": 2020,
+    "major": "Computer Science / Applied Mathematics & Statistics",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/ishansethi101298/",
+    "photo": "ishan-sethi.jpg"
+  },
+  {
+    "id": "jeevan-vangala",
+    "name": "Jeevan Vangala",
+    "pledgeClass": "Theta",
+    "gradYear": 2020,
+    "major": "Biomedical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/jeevan-vangala/",
+    "photo": "jeevan-vangala.jpg"
+  },
+  {
+    "id": "jessica-samuel",
+    "name": "Jessica Samuel",
+    "pledgeClass": "Theta",
+    "gradYear": 2019,
+    "major": "Electrical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/jessica-d-samuel/",
+    "photo": "jessica-samuel.jpg"
+  },
+  {
+    "id": "kate-cabahug",
+    "name": "Kate Cabahug",
+    "pledgeClass": "Theta",
+    "gradYear": 2020,
+    "major": "Computer Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/katecabahug/",
+    "photo": "kate-cabahug.jpg"
+  },
+  {
+    "id": "kitty-liu",
+    "name": "Kitty Liu",
+    "pledgeClass": "Theta",
+    "gradYear": 2019,
+    "major": "Chemical & Molecular Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/kittyliu1997/",
+    "photo": "kitty-liu.jpg"
+  },
+  {
+    "id": "kwan-to-michael-kwok",
+    "name": "Kwan To (Michael) Kwok",
+    "pledgeClass": "Theta",
+    "gradYear": 2020,
+    "major": "Mechanical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/kwantokwok/",
+    "photo": "kwan-to-michael-kwok.jpg"
+  },
+  {
+    "id": "sandy-huang",
+    "name": "Sandy Huang",
+    "pledgeClass": "Theta",
+    "gradYear": 2021,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/sandyhuang2468/",
+    "photo": "sandy-huang.jpg"
+  },
+  {
+    "id": "sherry-ko",
+    "name": "Sherry Ko",
+    "pledgeClass": "Theta",
+    "gradYear": 2019,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/kosherry/",
+    "photo": "sherry-ko.jpg"
+  },
+  {
+    "id": "sonam-sam-tharkay",
+    "name": "Sonam (Sam) Tharkay",
+    "pledgeClass": "Theta",
+    "gradYear": 2019,
+    "major": "Engineering Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/sonam-tharkay/",
+    "photo": "sonam-sam-tharkay.jpg"
+  },
+  {
+    "id": "alexandra-lu",
+    "name": "Alexandra Lu",
+    "pledgeClass": "Iota",
+    "gradYear": 2020,
+    "major": "Mechanical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/alexandralu/",
+    "photo": "alexandra-lu.jpg"
+  },
+  {
+    "id": "basim-chowdhury",
+    "name": "Basim Chowdhury",
+    "pledgeClass": "Iota",
+    "gradYear": 2020,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/basim-chowdhury/",
+    "photo": "basim-chowdhury.jpg"
+  },
+  {
+    "id": "emilly-ly",
+    "name": "Emilly Ly",
+    "pledgeClass": "Iota",
+    "gradYear": 2020,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/emilly-ly/",
+    "photo": "emilly-ly.jpg"
+  },
+  {
+    "id": "henry-ngai",
+    "name": "Henry Ngai",
+    "pledgeClass": "Iota",
+    "gradYear": 2020,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/henry-ngai/",
+    "photo": "henry-ngai.jpg"
+  },
+  {
+    "id": "lawrence-kok",
+    "name": "Lawrence Kok",
+    "pledgeClass": "Iota",
+    "gradYear": 2020,
+    "major": "Mechanical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/lawrence-kok/",
+    "photo": "lawrence-kok.jpg"
+  },
+  {
+    "id": "lysander-pena",
+    "name": "Lysander Pena",
+    "pledgeClass": "Iota",
+    "gradYear": 2020,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/lysander-pena/",
+    "photo": "lysander-pena.jpg"
+  },
+  {
+    "id": "michael-gentile",
+    "name": "Michael Gentile",
+    "pledgeClass": "Iota",
+    "gradYear": 2020,
+    "major": "Mechanical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/michael-j-gentile/",
+    "photo": "michael-gentile.jpg"
+  },
+  {
+    "id": "mustafa-alvi",
+    "name": "Mustafa Alvi",
+    "pledgeClass": "Iota",
+    "gradYear": 2020,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/mustafa-alvi/",
+    "photo": "mustafa-alvi.jpg"
+  },
+  {
+    "id": "andy-ouyang",
+    "name": "Andy Ouyang",
+    "pledgeClass": "Kappa",
+    "gradYear": 2020,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/andy-ouyang-32626114b/",
+    "photo": "andy-ouyang.jpg"
+  },
+  {
+    "id": "harrison-chen",
+    "name": "Harrison Chen",
+    "pledgeClass": "Kappa",
+    "gradYear": 2021,
+    "major": "Mechanical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/harrisonnchen/",
+    "photo": "harrison-chen.jpg"
+  },
+  {
+    "id": "jenny-xu",
+    "name": "Jenny Xu",
+    "pledgeClass": "Kappa",
+    "gradYear": 2021,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/kzhou98/",
+    "photo": "jenny-xu.jpg"
+  },
+  {
+    "id": "kevin-zhou",
+    "name": "Kevin Zhou",
+    "pledgeClass": "Kappa",
+    "gradYear": 2020,
+    "major": "Biomedical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/kzhou98/",
+    "photo": "kevin-zhou.jpg"
+  },
+  {
+    "id": "samuel-kotlyar",
+    "name": "Samuel Kotlyar",
+    "pledgeClass": "Kappa",
+    "gradYear": 2020,
+    "major": "Computer Science / Applied Mathematics & Statistics",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/samuel-kotlyar/",
+    "photo": "samuel-kotlyar.jpg"
+  },
+  {
+    "id": "william-zhu",
+    "name": "William Zhu",
+    "pledgeClass": "Kappa",
+    "gradYear": 2021,
+    "major": "Mechanical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/zhuoof/",
+    "photo": "william-zhu.jpg"
+  },
+  {
+    "id": "zachary-zysberg",
+    "name": "Zachary Zysberg",
+    "pledgeClass": "Kappa",
+    "gradYear": 2020,
+    "major": "Computer Science / Applied Mathematics & Statistics",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/zysberg/",
+    "photo": "zachary-zysberg.jpg"
+  },
+  {
+    "id": "billy-luy",
+    "name": "Billy Luy",
+    "pledgeClass": "Lambda",
+    "gradYear": 2021,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/billy-luy/",
+    "photo": "billy-luy.jpg"
+  },
+  {
+    "id": "joey-jiemjitpolchai",
+    "name": "Joey Jiemjitpolchai",
+    "pledgeClass": "Lambda",
+    "gradYear": 2020,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/joey-j-703686125/",
+    "photo": "joey-jiemjitpolchai.jpg"
+  },
+  {
+    "id": "mei-hua-mei",
+    "name": "Mei Hua Mei",
+    "pledgeClass": "Lambda",
+    "gradYear": 2022,
+    "major": "Civil Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/meihuamei/",
+    "photo": "mei-hua-mei.jpg"
+  },
+  {
+    "id": "thomas-manoka",
+    "name": "Thomas Manoka",
+    "pledgeClass": "Lambda",
+    "gradYear": 2021,
+    "major": "Computer Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/thomas-manoka/",
+    "photo": "thomas-manoka.jpg"
+  },
+  {
+    "id": "zi-jing-wong",
+    "name": "Zi Jing Wong",
+    "pledgeClass": "Lambda",
+    "gradYear": 2021,
+    "major": "Mechanical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/zijingwong/",
+    "photo": "zi-jing-wong.jpg"
+  },
+  {
+    "id": "ayaz-javaid",
+    "name": "Ayaz Javaid",
+    "pledgeClass": "Mu",
+    "gradYear": 2022,
+    "major": "Mechanical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/ayaz-javaid/",
+    "photo": "ayaz-javaid.jpg"
+  },
+  {
+    "id": "benjamin-huang",
+    "name": "Benjamin Huang",
+    "pledgeClass": "Mu",
+    "gradYear": 2020,
+    "major": "Computer Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/benjaminhuang3/",
+    "photo": "benjamin-huang.jpg"
+  },
+  {
+    "id": "chris-kang",
+    "name": "Chris Kang",
+    "pledgeClass": "Mu",
+    "gradYear": 2022,
+    "major": "Biology",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/chris-kang-0107/",
+    "photo": "chris-kang.jpg"
+  },
+  {
+    "id": "jahnavi-arora",
+    "name": "Jahnavi Arora",
+    "pledgeClass": "Mu",
+    "gradYear": 2022,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/benjaminhuang3/",
+    "photo": "jahnavi-arora.jpg"
+  },
+  {
+    "id": "joanna-lao",
+    "name": "Joanna Lao",
+    "pledgeClass": "Mu",
+    "gradYear": 2022,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/joanna-lao/",
+    "photo": "joanna-lao.png"
+  },
+  {
+    "id": "kaitlyn-chua",
+    "name": "Kaitlyn Chua",
+    "pledgeClass": "Mu",
+    "gradYear": 2022,
+    "major": "Biomedical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/kaitlyn-chua-/",
+    "photo": "kaitlyn-chua.jpg"
+  },
+  {
+    "id": "melanie-chio",
+    "name": "Melanie Chio",
+    "pledgeClass": "Mu",
+    "gradYear": 2022,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/benjaminhuang3/",
+    "photo": "melanie-chio.jpg"
+  },
+  {
+    "id": "michelle-tham",
+    "name": "Michelle Tham",
+    "pledgeClass": "Mu",
+    "gradYear": 2022,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/yewnikmtham/",
+    "photo": "michelle-tham.jpg"
+  },
+  {
+    "id": "vivian-yee",
+    "name": "Vivian Yee",
+    "pledgeClass": "Mu",
+    "gradYear": 2021,
+    "major": "Computer Science / Applied Mathematics and Statistics",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/vivian-yee/",
+    "photo": "vivian-yee.jpg"
+  },
+  {
+    "id": "gianmaria-biselli",
+    "name": "Gianmaria Biselli",
+    "pledgeClass": "Nu",
+    "gradYear": 2022,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/gianmariabiselli/",
+    "photo": "gianmaria-biselli.jpg"
+  },
+  {
+    "id": "hao-li",
+    "name": "Hao Li",
+    "pledgeClass": "Nu",
+    "gradYear": 2021,
+    "major": "Engineering Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/baohaoli/",
+    "photo": "hao-li.jpg"
+  },
+  {
+    "id": "mateo-choi",
+    "name": "Mateo Choi",
+    "pledgeClass": "Nu",
+    "gradYear": 2021,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/mateo-choi/",
+    "photo": "mateo-choi.jpg"
+  },
+  {
+    "id": "nicholas-leong",
+    "name": "Nicholas Leong",
+    "pledgeClass": "Nu",
+    "gradYear": 2022,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/nicholas-leong00/",
+    "photo": "nicholas-leong.jpg"
+  },
+  {
+    "id": "sean-zhou",
+    "name": "Sean Zhou",
+    "pledgeClass": "Nu",
+    "gradYear": 2021,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/sean--zhou/",
+    "photo": "sean-zhou.jpg"
+  },
+  {
+    "id": "shivani-sharma",
+    "name": "Shivani Sharma",
+    "pledgeClass": "Nu",
+    "gradYear": 2022,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/shivanisharma02/",
+    "photo": "shivani-sharma.jpg"
+  },
+  {
+    "id": "david-zhao",
+    "name": "David Zhao",
+    "pledgeClass": "Xi",
+    "gradYear": 2021,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/david221/",
+    "photo": "david-zhao.jpg"
+  },
+  {
+    "id": "harry-rajput",
+    "name": "Harry Rajput",
+    "pledgeClass": "Xi",
+    "gradYear": 2023,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/hrudayrajput/",
+    "photo": "harry-rajput.jpg"
+  },
+  {
+    "id": "joice-fan",
+    "name": "Joice Fan",
+    "pledgeClass": "Xi",
+    "gradYear": 2023,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/joicefan/",
+    "photo": "joice-fan.jpg"
+  },
+  {
+    "id": "logan-lao",
+    "name": "Logan Lao",
+    "pledgeClass": "Xi",
+    "gradYear": 2021,
+    "major": "Mechanical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/jiajin-lao/",
+    "photo": "logan-lao.jpg"
+  },
+  {
+    "id": "qifan-chen",
+    "name": "Qifan Chen",
+    "pledgeClass": "Xi",
+    "gradYear": 2023,
+    "major": "Mechanical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/jiajin-lao/",
+    "photo": "qifan-chen.jpg"
+  },
+  {
+    "id": "rachel-huang",
+    "name": "Rachel Huang",
+    "pledgeClass": "Xi",
+    "gradYear": 2022,
+    "major": "Civil Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/rachelxhuang/",
+    "photo": "rachel-huang.jpg"
+  },
+  {
+    "id": "abigail-masri",
+    "name": "Abigail Masri",
+    "pledgeClass": "Omicron",
+    "gradYear": 2024,
+    "major": "Biomedical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/abigail-masri/",
+    "photo": "abigail-masri.jpg"
+  },
+  {
+    "id": "abir-ahmed",
+    "name": "Abir Ahmed",
+    "pledgeClass": "Omicron",
+    "gradYear": 2023,
+    "major": "Applied Mathematics & Statistics",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/abirahmed3/",
+    "photo": "abir-ahmed.jpg"
+  },
+  {
+    "id": "andreas-kaimis",
+    "name": "Andreas Kaimis",
+    "pledgeClass": "Omicron",
+    "gradYear": 2024,
+    "major": "Biomedical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/andreas-kaimis/",
+    "photo": "andreas-kaimis.jpg"
+  },
+  {
+    "id": "arianna-jiang",
+    "name": "Arianna Jiang",
+    "pledgeClass": "Omicron",
+    "gradYear": 2023,
+    "major": "Biomedical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/arianna-jiang/",
+    "photo": "arianna-jiang.jpg"
+  },
+  {
+    "id": "christina-chau",
+    "name": "Christina Chau",
+    "pledgeClass": "Omicron",
+    "gradYear": 2023,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/christina-chau5/",
+    "photo": "christina-chau.jpg"
+  },
+  {
+    "id": "jack-jiang",
+    "name": "Jack Jiang",
+    "pledgeClass": "Omicron",
+    "gradYear": 2022,
+    "major": "Technological Systems Management",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/jackjiangj/",
+    "photo": "jack-jiang.jpg"
+  },
+  {
+    "id": "tracy-su",
+    "name": "Tracy Su",
+    "pledgeClass": "Omicron",
+    "gradYear": 2024,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/tracy101/",
+    "photo": "tracy-su.jpg"
+  },
+  {
+    "id": "zachary-gallela",
+    "name": "Zachary Galella",
+    "pledgeClass": "Omicron",
+    "gradYear": 2023,
+    "major": "Civil Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/zachary-galella/",
+    "photo": "zachary-gallela.jpg"
+  },
+  {
+    "id": "alexandra-jeong",
+    "name": "Alexandra Jeong",
+    "pledgeClass": "Pi",
+    "gradYear": 2023,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/alexandra-jeong/",
+    "photo": "alexandra-jeong.jpg"
+  },
+  {
+    "id": "ben-ko",
+    "name": "Ben Ko",
+    "pledgeClass": "Pi",
+    "gradYear": 2023,
+    "major": "Mechanical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/ben-ko/",
+    "photo": "ben-ko.jpg"
+  },
+  {
+    "id": "dardan-fida",
+    "name": "Dardan Fida",
+    "pledgeClass": "Pi",
+    "gradYear": 2024,
+    "major": "Chemical and Molecular Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/dardan-fida-6bb4581b4/",
+    "photo": "dardan-fida.jpg"
+  },
+  {
+    "id": "david-lin",
+    "name": "David Lin",
+    "pledgeClass": "Pi",
+    "gradYear": 2024,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/davidlin462/",
+    "photo": "david-lin.jpg"
+  },
+  {
+    "id": "dylan-rock",
+    "name": "Dylan Rock",
+    "pledgeClass": "Pi",
+    "gradYear": 2024,
+    "major": "Applied Mathematics & Statistics",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/dylanrock1/",
+    "photo": "dylan-rock.jpg"
+  },
+  {
+    "id": "jeffrey-ngai",
+    "name": "Jeffrey Ngai",
+    "pledgeClass": "Pi",
+    "gradYear": 2024,
+    "major": "Mechanical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/jeffrey-ngai/",
+    "photo": "jeffrey-ngai.jpg"
+  },
+  {
+    "id": "jenny-yang",
+    "name": "Jenny Yang",
+    "pledgeClass": "Pi",
+    "gradYear": 2024,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/jennyyng/",
+    "photo": "jenny-yang.jpg"
+  },
+  {
+    "id": "lucy-cleveland",
+    "name": "Lucy Cleveland",
+    "pledgeClass": "Pi",
+    "gradYear": 2024,
+    "major": "Civil Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/lucyxcleveland/",
+    "photo": "lucy-cleveland.jpg"
+  },
+  {
+    "id": "gary-liu",
+    "name": "Gary Liu",
+    "pledgeClass": "Rho",
+    "gradYear": 2024,
+    "major": "Civil Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/liu-gary/",
+    "photo": "gary-liu.jpg"
+  },
+  {
+    "id": "sayan-shil",
+    "name": "Sayan Shil",
+    "pledgeClass": "Rho",
+    "gradYear": 2025,
+    "major": "Biomedical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/sayan-shil/",
+    "photo": "sayan-shil.jpg"
+  },
+  {
+    "id": "brice-joseph",
+    "name": "Brice Joseph",
+    "pledgeClass": "Sigma",
+    "gradYear": 2025,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/brice-joseph-5a3293160/",
+    "photo": "brice-joseph.jpg"
+  },
+  {
+    "id": "celina-yeung",
+    "name": "Celina Yeung",
+    "pledgeClass": "Sigma",
+    "gradYear": 2025,
+    "major": "Chemical and Molecular Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/celinayeung/",
+    "photo": "celina-yeung.jpg"
+  },
+  {
+    "id": "ethan-pascual",
+    "name": "Ethan Pascual",
+    "pledgeClass": "Sigma",
+    "gradYear": 2025,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/ethanpascual/",
+    "photo": "ethan-pascual.jpg"
+  },
+  {
+    "id": "jake-papaspiridakos",
+    "name": "Jake Papaspiridakos",
+    "pledgeClass": "Sigma",
+    "gradYear": 2024,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/jpapaspiridakos/",
+    "photo": "jake-papaspiridakos.jpg"
+  },
+  {
+    "id": "lawrence-liu",
+    "name": "Lawrence Liu",
+    "pledgeClass": "Sigma",
+    "gradYear": 2024,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/liu-lawrence/",
+    "photo": "lawrence-liu.jpg"
+  },
+  {
+    "id": "shayna-halop",
+    "name": "Shayna Halop",
+    "pledgeClass": "Sigma",
+    "gradYear": 2025,
+    "major": "Engineering Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/shaynahalop/",
+    "photo": "shayna-halop.jpg"
+  },
+  {
+    "id": "ayush-dasgupta",
+    "name": "Ayush Dasgupta",
+    "pledgeClass": "Tau",
+    "gradYear": 2026,
+    "major": "Biomedical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/ayushdasgupta/",
+    "photo": "ayush-dasgupta.jpg"
+  },
+  {
+    "id": "daniel-joung",
+    "name": "Daniel Joung",
+    "pledgeClass": "Tau",
+    "gradYear": 2026,
+    "major": "Mechanical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/danieljoung/",
+    "photo": "daniel-joung.jpg"
+  },
+  {
+    "id": "fariah-sultana",
+    "name": "Fariah Sultana",
+    "pledgeClass": "Tau",
+    "gradYear": 2024,
+    "major": "Civil Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/fariah-sultana/",
+    "photo": "fariah-sultana.jpg"
+  },
+  {
+    "id": "sabrina-chan",
+    "name": "Sabrina Chan",
+    "pledgeClass": "Tau",
+    "gradYear": 2026,
+    "major": "Engineering Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/sabrina--chan/",
+    "photo": "sabrina-chan.jpg"
+  },
+  {
+    "id": "sahus-bhandary",
+    "name": "Sahus Bhandary",
+    "pledgeClass": "Tau",
+    "gradYear": 2026,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/sahus-bhandary/",
+    "photo": "sahus-bhandary.jpg"
+  },
+  {
+    "id": "shannon-mckenna",
+    "name": "Shannon McKenna",
+    "pledgeClass": "Tau",
+    "gradYear": 2026,
+    "major": "Biomedical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/shannon-leigh-mckenna/",
+    "photo": "shannon-mckenna.jpg"
+  },
+  {
+    "id": "tiffany-wang",
+    "name": "Tiffany Wang",
+    "pledgeClass": "Tau",
+    "gradYear": 2026,
+    "major": "Computer Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/tiffany-wang-191402198/",
+    "photo": "tiffany-wang.jpg"
+  },
+  {
+    "id": "abigail-lee",
+    "name": "Abigail Lee",
+    "pledgeClass": "Upsilon",
+    "gradYear": 2026,
+    "major": "Biomedical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/abigailrlee/",
+    "photo": "abigail-lee.jpg"
+  },
+  {
+    "id": "andy-yang",
+    "name": "Andy Yang",
+    "pledgeClass": "Upsilon",
+    "gradYear": 2026,
+    "major": "Information Systems",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/andy-yng/",
+    "photo": "andy-yang.jpg"
+  },
+  {
+    "id": "henry-kang",
+    "name": "Henry Kang",
+    "pledgeClass": "Upsilon",
+    "gradYear": 2026,
+    "major": "Mechanical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/hongshuai-kang/",
+    "photo": "henry-kang.jpg"
+  },
+  {
+    "id": "jackey-zheng",
+    "name": "Jackey Zheng",
+    "pledgeClass": "Upsilon",
+    "gradYear": 2026,
+    "major": "Electrical Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/jackey-zheng/",
+    "photo": "jackey-zheng.jpg"
+  },
+  {
+    "id": "jason-zheng",
+    "name": "Jason Zheng",
+    "pledgeClass": "Upsilon",
+    "gradYear": 2026,
+    "major": "Information Systems",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/zhengjason08/",
+    "photo": "jason-zheng.jpg"
+  },
+  {
+    "id": "jissie-lin",
+    "name": "Jissie Lin",
+    "pledgeClass": "Upsilon",
+    "gradYear": 2026,
+    "major": "Applied Mathematics",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/jissie-lin/",
+    "photo": "jissie-lin.jpg"
+  },
+  {
+    "id": "justin-xie",
+    "name": "Justin Xie",
+    "pledgeClass": "Upsilon",
+    "gradYear": 2026,
+    "major": "Information Systems",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/justin0xie/",
+    "photo": "justin-xie.jpg"
+  },
+  {
+    "id": "nikki-chang",
+    "name": "Nikki Chang",
+    "pledgeClass": "Upsilon",
+    "gradYear": 2026,
+    "major": "Applied Mathematics",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/nikkiwchang/",
+    "photo": "nikki-chang.jpg"
+  },
+  {
+    "id": "sparsh-jain",
+    "name": "Sparsh Jain",
+    "pledgeClass": "Phi",
+    "gradYear": 2027,
+    "major": "Mechanical Engineering",
+    "status": "active",
+    "linkedin": "https://www.linkedin.com/in/sparsh-jain-ny/",
+    "photo": "sparsh-jain.jpg"
+  },
+  {
+    "id": "bianca-talusan",
+    "name": "Bianca Talusan",
+    "pledgeClass": "Phi",
+    "gradYear": 2026,
+    "major": "Engineering Science",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/bianca-talusan/",
+    "photo": "bianca-talusan.jpg"
+  },
+  {
+    "id": "vivek-mahey",
+    "name": "Vivek Mahey",
+    "pledgeClass": "Phi",
+    "gradYear": 2026,
+    "major": "Civil Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/vivek-mahey/",
+    "photo": "vivek-mahey.jpg"
+  },
+  {
+    "id": "alex-mei",
+    "name": "Alex Mei",
+    "pledgeClass": "Phi",
+    "gradYear": 2027,
+    "major": "Mechanical Engineering",
+    "status": "active",
+    "linkedin": "https://www.linkedin.com/in/alex-j-mei/",
+    "photo": "alex-mei.jpg"
+  },
+  {
+    "id": "nazar-nemy",
+    "name": "Nazar Nemy",
+    "pledgeClass": "Phi",
+    "gradYear": 2026,
+    "major": "Civil Engineering",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/nazar-nemy/",
+    "photo": "nazar-nemy.jpg"
+  },
+  {
+    "id": "aaron-chiang",
+    "name": "Aaron Chiang",
+    "pledgeClass": "Phi",
+    "gradYear": 2027,
+    "major": "Biomedical Engineering",
+    "status": "active",
+    "linkedin": "https://www.linkedin.com/in/chiangaar/",
+    "photo": "aaron-chiang.jpg"
+  },
+  {
+    "id": "sebastian-galofaro",
+    "name": "Sebastian Galofaro",
+    "pledgeClass": "Phi",
+    "gradYear": 2027,
+    "major": "Biomedical Engineering",
+    "status": "active",
+    "linkedin": "https://www.linkedin.com/in/sebastiangalofaro/",
+    "photo": "sebastian-galofaro.jpg"
+  },
+  {
+    "id": "david-grager",
+    "name": "David Grager",
+    "pledgeClass": "Phi",
+    "gradYear": 2027,
+    "major": "Mechanical Engineering",
+    "status": "inactive",
+    "linkedin": "https://www.linkedin.com/in/dgrager/",
+    "photo": "david-grager.jpg"
+  },
+  {
+    "id": "damaris-ferrer",
+    "name": "Damaris Ferrer",
+    "pledgeClass": "Chi",
+    "gradYear": 2028,
+    "major": "Civil Engineering",
+    "status": "inactive",
+    "linkedin": "https://www.linkedin.com/in/damaris-ferrer/",
+    "photo": "damaris-ferrer.jpg"
+  },
+  {
+    "id": "raheel-rahman",
+    "name": "Raheel Rahman",
+    "pledgeClass": "Chi",
+    "gradYear": 2027,
+    "major": "Engineering Science / Economics",
+    "status": "active",
+    "linkedin": "https://www.linkedin.com/in/raheel-rahman-2oo5/",
+    "photo": "raheel-rahman.jpg"
+  },
+  {
+    "id": "delia-steiner",
+    "name": "Delia Steiner",
+    "pledgeClass": "Chi",
+    "gradYear": 2027,
+    "major": "Mechanical Engineering",
+    "status": "active",
+    "linkedin": "https://www.linkedin.com/in/delia-steiner/",
+    "photo": "delia-steiner.jpg"
+  },
+  {
+    "id": "amaan-abubakar",
+    "name": "Amaan Abubakar",
+    "pledgeClass": "Chi",
+    "gradYear": 2027,
+    "major": "Computer Science",
+    "status": "active",
+    "linkedin": "https://www.linkedin.com/in/amaann/",
+    "photo": "amaan-abubakar.jpg"
+  },
+  {
+    "id": "hua-huang",
+    "name": "Hua Huang",
+    "pledgeClass": "Chi",
+    "gradYear": 2027,
+    "major": "Computer Engineering",
+    "status": "inactive",
+    "linkedin": "https://www.linkedin.com/in/hua-huang-74a336226/",
+    "photo": "hua-huang.jpg"
+  },
+  {
+    "id": "arjun-madhu",
+    "name": "Arjun Madhu",
+    "pledgeClass": "Chi",
+    "gradYear": 2026,
+    "major": "Information Systems",
+    "status": "alumni",
+    "linkedin": "https://www.linkedin.com/in/arjunmadhu/",
+    "photo": "arjun-madhu.jpg"
+  },
+  {
+    "id": "ryan-ver-eecke",
+    "name": "Ryan Ver Eecke",
+    "pledgeClass": "Chi",
+    "gradYear": 2027,
+    "major": "Computer Science / Applied Mathematics & Statistics",
+    "status": "inactive",
+    "linkedin": "https://www.linkedin.com/in/ryan-ver-eecke/",
+    "photo": "ryan-ver-eecke.jpg"
+  },
+  {
+    "id": "vicki-li",
+    "name": "Vicki Li",
+    "pledgeClass": "Psi",
+    "gradYear": 2028,
+    "major": "Civil Engineering",
+    "status": "inactive",
+    "linkedin": "https://www.linkedin.com/in/vickili8112/",
+    "photo": "vicki-li.jpg"
+  },
+  {
+    "id": "bernadette-baroi",
+    "name": "Bernadette Baroi",
+    "pledgeClass": "Psi",
+    "gradYear": 2027,
+    "major": "Computer Engineering",
+    "status": "active",
+    "linkedin": "https://www.linkedin.com/in/bernadettebaroi/",
+    "photo": "bernadette-baroi.jpg"
+  },
+  {
+    "id": "maya-pulawska",
+    "name": "Maya Pulawska",
+    "pledgeClass": "Psi",
+    "gradYear": 2027,
+    "major": "Mechanical Engineering / Applied Mathematics & Statistics",
+    "status": "inactive",
+    "linkedin": null,
+    "photo": null
+  },
+  {
+    "id": "alvin-kuruvilla",
+    "name": "Alvin Kuruvilla",
+    "pledgeClass": "Psi",
+    "gradYear": 2027,
+    "major": "Electrical Engineering",
+    "status": "active",
+    "linkedin": "https://www.linkedin.com/in/alvin-kuruvilla/",
+    "photo": "alvin-kuruvilla.jpg"
+  },
+  {
+    "id": "prattay-dey",
+    "name": "Prattay Dey",
+    "pledgeClass": "Psi",
+    "gradYear": 2027,
+    "major": "Computer Engineering / Applied Mathematics & Statistics",
+    "status": "active",
+    "linkedin": "https://www.linkedin.com/in/prattay-dey/",
+    "photo": "prattay-dey.jpg"
+  },
+  {
+    "id": "jessie-yang",
+    "name": "Jessie Yang",
+    "pledgeClass": "Gamma Beta",
+    "gradYear": 2028,
+    "major": "Computer Science / Psychology",
+    "status": "active",
+    "linkedin": "https://www.linkedin.com/in/jessieyang11/",
+    "photo": "jessie-yang.jpg"
+  },
+  {
+    "id": "rylee-nguyen",
+    "name": "Rylee Nguyen",
+    "pledgeClass": "Gamma Beta",
+    "gradYear": 2027,
+    "major": "Mechanical Engineering",
+    "status": "active",
+    "linkedin": "https://www.linkedin.com/in/ryleenguyen/",
+    "photo": "rylee-nguyen.jpg"
+  },
+  {
+    "id": "sumin-lee",
+    "name": "Sumin Lee",
+    "pledgeClass": "Gamma Beta",
+    "gradYear": 2028,
+    "major": "Biomedical Engineering",
+    "status": "active",
+    "linkedin": "https://www.linkedin.com/in/suminlee0618/",
+    "photo": "sumin-lee.jpg"
+  },
+  {
+    "id": "ryan-tang",
+    "name": "Ryan Tang",
+    "pledgeClass": "Gamma Beta",
+    "gradYear": 2028,
+    "major": "Biomedical Engineering",
+    "status": "active",
+    "linkedin": "https://www.linkedin.com/in/ryan-tang8/",
+    "photo": "ryan-tang.jpg"
+  },
+  {
+    "id": "rakrita-rao",
+    "name": "Rakrita Rao",
+    "pledgeClass": "Gamma Beta",
+    "gradYear": 2028,
+    "major": "Computer Science / Business Management",
+    "status": "active",
+    "linkedin": "https://www.linkedin.com/in/rakritarao/",
+    "photo": "rakrita-rao.jpg"
+  },
+  {
+    "id": "anthony-alters",
+    "name": "Anthony Alters",
+    "pledgeClass": "Gamma Beta",
+    "gradYear": 2028,
+    "major": "Mechanical Engineering",
+    "status": "active",
+    "linkedin": "https://www.linkedin.com/in/anthony-alters/",
+    "photo": "anthony-alters.jpg"
+  },
+  {
+    "id": "arvin-azmain",
+    "name": "Arvin Azmain",
+    "pledgeClass": "Gamma Beta",
+    "gradYear": 2028,
+    "major": "Civil Engineering",
+    "status": "active",
+    "linkedin": "https://www.linkedin.com/in/arvin-azmain-50a1a8300/",
+    "photo": "arvin-azmain.jpg"
+  },
+  {
+    "id": "caden-autencio",
+    "name": "Caden Autencio",
+    "pledgeClass": "Gamma Beta",
+    "gradYear": 2028,
+    "major": "Electrical Engineering",
+    "status": "active",
+    "linkedin": "https://www.linkedin.com/in/caden-autencio-aabb612a5/",
+    "photo": "caden-autencio.jpg"
+  },
+  {
+    "id": "lance-de-ocampo",
+    "name": "Lance De Ocampo",
+    "pledgeClass": "Gamma Beta",
+    "gradYear": 2028,
+    "major": "Computer Science",
+    "status": "active",
+    "linkedin": "https://www.linkedin.com/in/lance-de-ocampo/",
+    "photo": "lance-de-ocampo.jpg"
+  },
+  {
+    "id": "vincent-blendell",
+    "name": "Vincent Blendell",
+    "pledgeClass": "Gamma Beta",
+    "gradYear": 2028,
+    "major": "Mechanical Engineering",
+    "status": "active",
+    "linkedin": "https://www.linkedin.com/in/vincentblendell/",
+    "photo": "vincent-blendell.jpg"
+  }
+]

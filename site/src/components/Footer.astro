@@ -1,0 +1,118 @@
+---
+// The drawing title block: solid black with a brass rule on top, a ruled grid of cells,
+// each a gold-2 Gorton label over a warm-white value.
+// `sheet` comes from Base (the page name). REV is the current rush semester; DATE is the build date.
+import { site, rush } from '../lib/data';
+
+interface Props { sheet: string }
+const { sheet } = Astro.props;
+const now = new Date();
+const year = now.getFullYear();
+const date = now.toLocaleDateString('en-CA'); // YYYY-MM-DD
+const handle = (url: string) => '@' + url.replace(/\/$/, '').split('/').pop();
+// The email may only break after the @ (keep-all elsewhere), never mid-word.
+const [emailUser, emailHost] = site.email.split('@');
+---
+<footer class="tb" id="contact">
+  <div class="col tb-inner">
+    <p class="ask">Have any questions, concerns, or comments? We would love to hear from you!</p>
+
+    <div class="cells">
+      <div class="cell id">
+        <p class="plate label">Theta Tau</p>
+        <p class="plate value">{site.chapter} Chapter<br />{site.school}<br />Established {site.founded}</p>
+      </div>
+      <div class="cell contact">
+        <p class="plate label">Contact</p>
+        <p class="plate value"><a class="nobreak" href={`mailto:${site.email}`}>{emailUser}@<wbr />{emailHost}</a></p>
+      </div>
+      <div class="cell ig">
+        <p class="plate label">Instagram</p>
+        <p class="plate value">
+          <a class="nobreak" href={site.links.instagram}>{handle(site.links.instagram)}</a><br />
+          <a class="nobreak" href={site.links.rushInstagram}>{handle(site.links.rushInstagram)}</a>
+        </p>
+      </div>
+      <div class="cell links">
+        <p class="plate label">Links</p>
+        <ul class="plate value">
+          <li><a href={site.links.facebook}>Facebook</a></li>
+          <li><a href={site.links.youtube}>YouTube</a></li>
+          <li><a href={site.links.linktree}>Linktree</a></li>
+          <li><a href={site.links.national}>Theta Tau National</a></li>
+        </ul>
+      </div>
+      <div class="cell sheet">
+        <p class="plate label">Sheet</p>
+        <p class="plate value">{sheet}</p>
+      </div>
+      <div class="cell rev">
+        <p class="plate label">Rev</p>
+        <p class="plate value">{rush.semester}</p>
+      </div>
+      <div class="cell date">
+        <p class="plate label">Date</p>
+        <p class="plate value">{date}</p>
+      </div>
+      <div class="cell by">
+        <p class="plate label">Webmaster</p>
+        <p class="plate value">{site.webmaster.name}<br /><span class="role">Built this site in {site.webmaster.since}.</span></p>
+      </div>
+    </div>
+
+    <p class="copy">© {year} Theta Tau, {site.chapter} Chapter</p>
+  </div>
+</footer>
+
+<style>
+  .tb { background: var(--sheet); color: var(--text); border-top: 2px solid var(--gold); padding: clamp(40px, 4vw, 72px) 0 clamp(28px, 2.4vw, 44px); }
+  .ask { font-size: 18px; line-height: 1.45; margin-bottom: 24px; max-width: none; }
+  @media (min-width: 1600px) { .ask { font-size: 20px; } }
+
+  /* 1px gaps over a rule-colored background draw the cell rules */
+  .cells {
+    display: grid; gap: 1px;
+    background: var(--rule); border: 1px solid var(--rule);
+    /* contact keeps the email on one line at 1400px; the DRAWN BY column is the narrowest */
+    grid-template-columns: 1.4fr 1.2fr 1.15fr 1.05fr 1fr;
+    grid-template-areas:
+      'id contact ig links by'
+      'id sheet rev date by';
+  }
+  .cell { background: var(--sheet); padding: 14px 16px 16px; min-width: 0; }
+  @media (min-width: 1600px) { .cell { padding: 18px 22px 20px; } }
+  .id { grid-area: id; } .contact { grid-area: contact; } .ig { grid-area: ig; } .links { grid-area: links; }
+  .sheet { grid-area: sheet; } .rev { grid-area: rev; } .date { grid-area: date; } .by { grid-area: by; }
+  .role { display: block; margin-top: 4px; font-size: 13px; line-height: 1.4; color: var(--text-2); }
+
+  .label { font-weight: 400; font-size: 12px; line-height: 1.2; margin-bottom: 10px; color: var(--gold-2); word-spacing: -0.55em; }
+  .value { font-size: 15px; line-height: 1.4; color: var(--text); overflow-wrap: anywhere; max-width: none; margin-top: 0; }
+  .id .value { font-size: 16px; }
+  @media (min-width: 1600px) { .value { font-size: 16px; } }
+  /* handles and the email never break mid-word ("@SBUTHETATAURUSH" is ~172px at 14px) */
+  .nobreak { overflow-wrap: normal; word-break: keep-all; }
+  ul.value { list-style: none; margin: 0; padding: 0; }
+
+  .tb a { color: var(--text); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  .tb a:hover { color: var(--gold-2); }
+
+  .copy { font-size: 13px; margin-top: 16px; color: var(--text-2); }
+
+  @media (max-width: 899px) {
+    .cells {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas:
+        'id id id'
+        'contact ig ig'
+        'links links links'
+        'sheet rev date'
+        'by by by';
+    }
+  }
+  @media (max-width: 599px) {
+    .cells {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 'id id' 'contact contact' 'ig ig' 'links links' 'sheet rev' 'date date' 'by by';
+    }
+  }
+</style>

@@ -1,0 +1,58 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { site } from '../lib/data';
+
+// `sheet` is the page name printed in the footer title block's SHEET cell.
+// `flush` drops main's top/bottom padding for pages that open and close with full-bleed bands (home).
+interface Props { title?: string; description?: string; image?: string; sheet?: string; flush?: boolean }
+const {
+  title,
+  sheet = title ?? 'Home',
+  description = `Theta Tau at Stony Brook University is the ${site.chapter} chapter of the nation's oldest professional engineering fraternity: co-ed, founded on brotherhood, profession, and service.`,
+  image = '/og.jpg',
+  flush = false,
+} = Astro.props;
+const fullTitle = title ? `${title}, Theta Tau at Stony Brook` : 'Theta Tau at Stony Brook University';
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const orgLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Theta Tau, Zeta Epsilon Chapter at Stony Brook University',
+  url: Astro.site,
+  logo: new URL('/logo.png', Astro.site),
+  email: site.email,
+  sameAs: [site.links.instagram, site.links.rushInstagram, site.links.facebook, site.links.youtube],
+};
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#000000" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Theta Tau at Stony Brook" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL(image, Astro.site)} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <script type="application/ld+json" set:html={JSON.stringify(orgLd)} />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <Header />
+    <main id="main" class:list={['pad', { 'pad--flush': flush }]}>
+      <slot />
+    </main>
+    <Footer sheet={sheet} />
+  </body>
+</html>

@@ -1,0 +1,53 @@
+---
+import Base from '../../../layouts/Base.astro';
+import BrotherCard from '../../../components/BrotherCard.astro';
+import ClassNav from '../../../components/ClassNav.astro';
+import { allClasses, classLabel } from '../../../lib/data';
+
+export function getStaticPaths() {
+  return allClasses.map((c, i) => ({
+    params: { slug: c.slug },
+    props: { cls: c, prev: allClasses[i - 1], next: allClasses[i + 1] },
+  }));
+}
+const { cls, prev, next } = Astro.props;
+const label = classLabel(cls.name);
+const n = cls.members.length;
+const years = cls.members.map((b) => b.gradYear).filter((y): y is number => !!y);
+const lo = Math.min(...years);
+const hi = Math.max(...years);
+const range = years.length ? (lo === hi ? `${lo}` : `${lo}–${hi}`) : '';
+const activeCount = cls.members.filter((b) => b.status === 'active').length;
+const line = `${n} ${n === 1 ? 'brother' : 'brothers'}${range ? `, class of ${range}` : ''}${activeCount > 0 ? `, ${activeCount} active` : ''}.`;
+---
+<Base title={label} sheet={label} description={`The ${label} of Theta Tau at Stony Brook University.`}>
+  <header class="col sec">
+    <h1>{label}</h1>
+    <p class="lede intro">{line}</p>
+    <p class="back"><a href="/brothers/">Back to all brothers</a></p>
+  </header>
+
+  <section class="col sec" aria-label={`${label} members`}>
+    <div class="tiles">
+      {cls.members.map((b) => <BrotherCard b={b} />)}
+    </div>
+    {(prev || next) && (
+      <nav class="pager" aria-label="Other classes">
+        {prev && <a class="prev" href={`/brothers/class/${prev.slug}/`}>Previous: {classLabel(prev.name)}</a>}
+        {next && <a class="next" href={`/brothers/class/${next.slug}/`}>Next: {classLabel(next.name)}</a>}
+      </nav>
+    )}
+  </section>
+
+  <ClassNav current={cls.slug} />
+</Base>
+
+<style>
+  .intro { margin-top: clamp(20px, 2vw, 36px); color: var(--text); }
+  .back { margin-top: 8px; font-weight: 500; }
+
+  .pager { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; margin-top: 48px; }
+  .pager a { font-weight: 500; color: var(--text); text-decoration: underline; }
+  .pager a:hover { color: var(--gold-2); }
+  .pager .next { margin-left: auto; }
+</style>

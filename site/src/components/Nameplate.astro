@@ -1,0 +1,61 @@
+---
+// The brass band: the chapter's numbers on a full-width --gold strip, under the home hero.
+// Black Gorton labels over black Gorton Bold values, 1px black rules between cells,
+// black rivets at the band's four corners. The one solid gold surface on the site.
+// Six cells in one row from 1100px, 3 + 3 on tablets, two per row on phones.
+// Usage: <Nameplate rows={[{ label: 'Chapter', value: 'Zeta Epsilon' }, …]} />
+interface Props { rows: { label: string; value: string | number }[] }
+const { rows } = Astro.props;
+---
+<section class="np" aria-label="The chapter in numbers">
+  <span class="rivets" aria-hidden="true"></span>
+  <dl class="wrap cells">
+    {rows.map((r) => (
+      <div class="cell">
+        <dt class="plate">{r.label}</dt>
+        <dd class="plate">{r.value}</dd>
+      </div>
+    ))}
+  </dl>
+</section>
+
+<style>
+  .np { position: relative; background: var(--gold); color: #000; }
+  /* four rivets: top two on the band, bottom two on the inner span */
+  .np::before, .np::after, .rivets::before, .rivets::after {
+    content: ''; position: absolute; width: 8px; height: 8px; border-radius: 50%; background: #000;
+  }
+  .np::before { top: 8px; left: 8px; }
+  .np::after { top: 8px; right: 8px; }
+  .rivets { position: absolute; inset: 0; pointer-events: none; }
+  .rivets::before { bottom: 8px; left: 8px; }
+  .rivets::after { bottom: 8px; right: 8px; }
+
+  /* the first cell is wider so ZETA EPSILON stays on one line */
+  .cells { display: grid; grid-template-columns: minmax(0, 1.6fr) repeat(5, minmax(0, 1fr)); margin-block: 0; }
+  .cell { display: flex; flex-direction: column; gap: 10px; padding: clamp(22px, 2vw, 36px) clamp(16px, 1.6vw, 32px); min-width: 0; }
+  .cell + .cell { border-left: 1px solid #000; }
+  .cell:first-child { padding-left: 0; }
+  .cell:last-child { padding-right: 0; }
+  /* small Gorton needs a less negative word gap than the -0.9em default, or ACTIVE BROTHERS runs together */
+  dt { font-weight: 400; font-size: 13px; line-height: 1.2; color: #000; word-spacing: -0.55em; }
+  dd { margin: 0; font-weight: 700; font-size: clamp(22px, 2vw, 36px); line-height: 1.05; color: #000; }
+  @media (min-width: 1600px) { dt { font-size: 14px; } }
+
+  /* tablet: 3 + 3, a rule between the rows */
+  @media (max-width: 1099px) {
+    .cells { grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr)); }
+    .cell:nth-child(3n + 1) { border-left: 0; padding-left: 0; }
+    .cell:nth-child(3n) { padding-right: 0; }
+    .cell:nth-child(n + 4) { border-top: 1px solid #000; }
+  }
+  /* phone: two per row */
+  @media (max-width: 599px) {
+    .cells { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .cell { padding: 18px 14px; }
+    .cell:nth-child(n) { border-left: 0; border-top: 0; padding-left: 14px; padding-right: 14px; }
+    .cell:nth-child(2n) { border-left: 1px solid #000; padding-right: 0; }
+    .cell:nth-child(2n + 1) { padding-left: 0; }
+    .cell:nth-child(n + 3) { border-top: 1px solid #000; }
+  }
+</style>

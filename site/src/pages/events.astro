@@ -1,0 +1,75 @@
+---
+import Base from '../layouts/Base.astro';
+import { events, fmtDate, site, type ChapterEvent } from '../lib/data';
+const today = new Date().toISOString().slice(0, 10);
+const upcoming = events.filter((e) => e.date >= today).reverse();
+const past = events.filter((e) => e.date < today);
+const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+const typeText = (e: ChapterEvent) => (e.rush ? `Rush, ${e.rush}` : cap(e.type));
+const when = (e: ChapterEvent) => [fmtDate(e.date), e.time, e.location].filter(Boolean).join(', ');
+// Time and room, when either exists, go on a second line under the event name ("7–9 PM, SAC 303").
+const place = (e: ChapterEvent) => [e.time, e.location].filter(Boolean).join(', ');
+const countText = (n: number) => (n ? `${n} upcoming event${n === 1 ? '' : 's'}.` : 'No events posted for this semester yet.');
+---
+<Base title="Events" sheet="Events" description="Upcoming and past events from Theta Tau at Stony Brook.">
+  <section class="col sec">
+    <h1>Our events</h1>
+    <p class="lede intro">
+      <span data-upcoming-count>{countText(upcoming.length)}</span>{' '}
+      Follow <a href={site.links.instagram}>@stonythetatau</a> for announcements.
+    </p>
+  </section>
+
+  {[{ id: 'upcoming', title: 'Upcoming events', list: upcoming }, { id: 'past', title: 'Past events', list: past }].map((s) => (
+    <section class="col sec" id={s.id} hidden={!s.list.length}>
+      <h2 class="h">{s.title}</h2>
+      <table class="tbl tbl--events">
+        <thead>
+          <tr><th class="stack" scope="col">Event</th><th scope="col">Date</th><th scope="col">Event</th><th scope="col">Type</th></tr>
+        </thead>
+        <tbody>
+          {s.list.map((e) => (
+            <tr data-date={e.date}>
+              <td class="stack">
+                <span class="stack-name">{e.name}</span>
+                <span class="stack-line">{when(e)}</span>
+                <span class="stack-line">{typeText(e)}</span>
+                {e.note && <span class="stack-line">{e.note}</span>}
+              </td>
+              <td data-label="Date"><time datetime={e.date}>{fmtDate(e.date)}</time></td>
+              <td data-label="Event">{e.name}{place(e) && <span class="tbl-sub">{place(e)}</span>}{e.note && <span class="tbl-sub">{e.note}</span>}</td>
+              <td data-label="Type">{typeText(e)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+  ))}
+</Base>
+
+<script>
+  // Re-split upcoming vs. past in the visitor's browser so it never goes stale between deploys.
+  const pad = (n: number) => String(n).padStart(2, '0');
+  const now = new Date();
+  const today = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
+  const upSec = document.getElementById('upcoming');
+  const pastSec = document.getElementById('past');
+  const upList = upSec?.querySelector('tbody');
+  const pastList = pastSec?.querySelector('tbody');
+  if (upSec && pastSec && upList && pastList) {
+    const items = [...document.querySelectorAll<HTMLTableRowElement>('#upcoming tbody tr[data-date], #past tbody tr[data-date]')];
+    const date = (tr: HTMLTableRowElement) => tr.dataset.date!;
+    const up = items.filter((tr) => date(tr) >= today).sort((a, b) => date(a).localeCompare(date(b)));
+    const past = items.filter((tr) => date(tr) < today).sort((a, b) => date(b).localeCompare(date(a)));
+    upList.append(...up);
+    pastList.append(...past);
+    upSec.hidden = !up.length;
+    pastSec.hidden = !past.length;
+    const count = document.querySelector('[data-upcoming-count]');
+    if (count) count.textContent = up.length ? `${up.length} upcoming event${up.length === 1 ? '' : 's'}.` : 'No events posted for this semester yet.';
+  }
+</script>
+
+<style>
+  .intro { margin-top: clamp(20px, 2vw, 36px); }
+</style>

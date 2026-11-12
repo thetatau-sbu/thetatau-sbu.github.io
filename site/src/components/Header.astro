@@ -1,0 +1,145 @@
+---
+// The pad's header strip: three ruled cells (brand | nav | rush link). Not sticky.
+// Tablet (600-899): the rush cell hides (Rush stays in the nav).
+// Phone (< 600): brand | Menu; the menu opens a --sheet-2 panel (with the grid) below the strip.
+import { rush } from '../lib/data';
+
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const nav = [
+  { href: '/rush/', label: 'Rush' },
+  { href: '/brothers/', label: 'Brothers' },
+  { href: '/careers/', label: 'Careers' },
+  { href: '/events/', label: 'Events' },
+];
+const menu = [{ href: '/', label: 'Home' }, ...nav];
+const isCurrent = (href: string) =>
+  href === '/' ? path === '/' : path === href.replace(/\/$/, '') || path.startsWith(href);
+---
+<header class="site-header">
+  <div class="strip">
+    <a class="cell brand" href="/" aria-label="Theta Tau at Stony Brook, home">
+      <img src="/logo.png" alt="" width="36" height="36" />
+      <span class="brand-text">
+        <span class="plate brand-name">Theta Tau</span>
+        <span class="brand-sub">Zeta Epsilon Chapter</span>
+      </span>
+    </a>
+
+    <nav class="cell nav" aria-label="Main">
+      <ul>
+        {nav.map((n) => (
+          <li><a href={n.href} aria-current={isCurrent(n.href) ? 'page' : undefined}>{n.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <a class="cell rush" href="/rush/">Rush {rush.semester}</a>
+
+    <button class="cell menu-btn" type="button" aria-expanded="false" aria-controls="mobile-nav">
+      <span class="m-open">Menu</span><span class="m-close">Close</span>
+    </button>
+  </div>
+
+  <nav id="mobile-nav" class="panel" aria-label="Main" hidden>
+    <ul>
+      {menu.map((n) => (
+        <li><a href={n.href} aria-current={isCurrent(n.href) ? 'page' : undefined}>{n.label}</a></li>
+      ))}
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const btn = document.querySelector<HTMLButtonElement>('.menu-btn')!;
+  const panel = document.getElementById('mobile-nav')!;
+  const set = (open: boolean) => {
+    btn.setAttribute('aria-expanded', String(open));
+    panel.hidden = !open;
+    document.body.classList.toggle('nav-open', open);
+  };
+  btn.addEventListener('click', () => set(btn.getAttribute('aria-expanded') !== 'true'));
+  panel.addEventListener('click', (e) => { if ((e.target as HTMLElement).closest('a')) set(false); });
+  addEventListener('keydown', (e) => { if (e.key === 'Escape') set(false); });
+  matchMedia('(min-width: 600px)').addEventListener('change', (m) => { if (m.matches) set(false); });
+</script>
+
+<style>
+  /* solid black over the grid, brass piping along the bottom edge */
+  .site-header { background: var(--sheet); }
+  .strip {
+    display: grid; grid-template-columns: auto 1fr auto;
+    min-height: var(--header-strip);
+    border-bottom: 2px solid var(--gold);
+  }
+  .cell { display: flex; align-items: center; min-width: 0; }
+  .cell + .cell { border-left: 1px solid var(--rule); }
+
+  /* brand: starts at the page gutter */
+  .brand { gap: 12px; padding: 0 28px 0 var(--gutter); color: var(--text); text-decoration: none; }
+  .brand img { width: 36px; height: 36px; flex: none; }
+  .brand-text { display: grid; gap: 3px; line-height: 1; }
+  .brand-name { font-size: 15px; color: var(--text); }
+  .brand-sub { font-size: 13px; color: var(--text-2); }
+
+  .nav { padding: 0 32px; }
+  .nav ul { display: flex; flex-wrap: wrap; gap: 4px 32px; list-style: none; margin: 0; padding: 0; }
+  .nav a { font-weight: 500; font-size: 16px; color: var(--text); text-decoration: none; }
+  .nav a:hover { color: var(--red); }
+  .nav a[aria-current='page'] {
+    color: var(--gold-2); text-decoration: underline;
+    text-decoration-thickness: 2px; text-underline-offset: 6px;
+  }
+
+  /* the one red surface in the strip: full height, white text */
+  .rush {
+    padding: 0 var(--gutter); background: var(--red-deep);
+    font-weight: 700; font-size: 16px; color: #fff; text-decoration: none; white-space: nowrap;
+  }
+  .rush:hover { background: #a3252b; color: #fff; }
+
+  .menu-btn {
+    display: none; padding: 0 var(--gutter); border: 0; background: none;
+    font-weight: 700; font-size: 16px; color: var(--text); cursor: pointer;
+  }
+  .menu-btn .m-close { display: none; }
+  .menu-btn[aria-expanded='true'] .m-open { display: none; }
+  .menu-btn[aria-expanded='true'] .m-close { display: inline; }
+
+  /* phone menu panel: the sheet in --sheet-2, with the grid */
+  .panel {
+    min-height: calc(100dvh - var(--header-strip) - 2px);
+    background-color: var(--sheet-2); background-image: var(--pad-grid);
+    border-bottom: 1px solid var(--rule);
+  }
+  .panel ul { list-style: none; margin: 0; padding: 16px var(--gutter); }
+  .panel a {
+    display: block; padding: 12px 0;
+    font: 700 32px/1.2 var(--font-text); color: var(--text); text-decoration: none;
+  }
+  .panel a:hover { color: var(--red); }
+  .panel a[aria-current='page'] { color: var(--gold-2); }
+
+  /* wide screens: taller strip (--header-strip is 76px from 1600px), bigger brand and nav */
+  @media (min-width: 1600px) {
+    .brand { gap: 14px; padding-right: 36px; }
+    .brand img { width: 44px; height: 44px; }
+    .brand-name { font-size: 18px; }
+    .brand-sub { font-size: 14px; }
+    .nav { padding: 0 40px; }
+    .nav ul { column-gap: 44px; }
+    .nav a { font-size: 18px; }
+    .rush { font-size: 18px; }
+  }
+  @media (max-width: 899px) {
+    .strip { grid-template-columns: auto 1fr; }
+    .brand-sub { display: none; }
+    .rush { display: none; }
+  }
+  @media (max-width: 599px) {
+    .strip { grid-template-columns: 1fr auto; }
+    .nav { display: none; }
+    .menu-btn { display: flex; }
+  }
+  @media (min-width: 600px) { .panel { display: none; } }
+  :global(body.nav-open) { overflow: hidden; }
+</style>

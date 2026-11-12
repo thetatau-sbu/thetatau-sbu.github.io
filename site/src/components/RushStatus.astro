@@ -1,0 +1,98 @@
+---
+// Status panel for the current rush. Reads rush.json at build time, then a small
+// script re-checks the date in the visitor's browser so it never goes stale:
+// no dates -> "Dates TBA", before rush -> countdown, during -> "Rush is on", after -> "Rush has ended".
+import { rush, site } from '../lib/data';
+
+const hasDates = Boolean(rush.startDate && rush.endDate);
+---
+<div class="rush-status" data-start={rush.startDate ?? ''} data-end={rush.endDate ?? ''} data-state={hasDates ? 'upcoming' : 'tba'}>
+  <div class="body">
+    <div class="state state--tba">
+      <p class="plate word">Dates TBA</p>
+      <p class="note">{rush.datesNote}</p>
+    </div>
+
+    <div class="state state--upcoming">
+      <p class="visually-hidden">Time until rush starts</p>
+      <div class="countdown" aria-live="off">
+        <span><b class="plate" data-unit="d">--</b><small>days</small></span>
+        <span><b class="plate" data-unit="h">--</b><small>hours</small></span>
+        <span><b class="plate" data-unit="m">--</b><small>minutes</small></span>
+        <span><b class="plate" data-unit="s">--</b><small>seconds</small></span>
+      </div>
+    </div>
+
+    <div class="state state--live">
+      <p class="plate word">Rush is on</p>
+      <p class="note">Check the schedule below and come to the next event.</p>
+    </div>
+
+    <div class="state state--over">
+      <p class="plate word">Rush has ended</p>
+      <p class="note">The next rush is announced on <a href={site.links.rushInstagram}>@sbuthetataurush</a>.</p>
+    </div>
+  </div>
+
+  <div class="actions">
+    {rush.interestFormUrl
+      ? <a class="btn" href={rush.interestFormUrl}>Interest form</a>
+      : <a class="btn btn--line" href={site.links.rushInstagram}>Follow @sbuthetataurush</a>}
+  </div>
+</div>
+
+<script>
+  const parse = (s: string, endOfDay = false) => {
+    if (!s) return null;
+    const [y, m, d] = s.split('-').map(Number);
+    return endOfDay ? new Date(y, m - 1, d, 23, 59, 59) : new Date(y, m - 1, d);
+  };
+  document.querySelectorAll<HTMLElement>('.rush-status').forEach((el) => {
+    const start = parse(el.dataset.start!);
+    const end = parse(el.dataset.end!, true);
+    if (!start || !end) return;
+    const units = Object.fromEntries([...el.querySelectorAll<HTMLElement>('[data-unit]')].map((u) => [u.dataset.unit!, u]));
+    const pad = (n: number) => String(n).padStart(2, '0');
+    const tick = () => {
+      const now = Date.now();
+      if (now >= end.getTime()) { el.dataset.state = 'over'; return; }
+      if (now >= start.getTime()) { el.dataset.state = 'live'; return; }
+      el.dataset.state = 'upcoming';
+      let s = Math.floor((start.getTime() - now) / 1000);
+      units.d.textContent = String(Math.floor(s / 86400)); s %= 86400;
+      units.h.textContent = pad(Math.floor(s / 3600)); s %= 3600;
+      units.m.textContent = pad(Math.floor(s / 60));
+      units.s.textContent = pad(s % 60);
+      setTimeout(tick, 1000);
+    };
+    tick();
+  });
+</script>
+
+<style>
+  .rush-status {
+    display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 24px 40px;
+    padding: clamp(24px, 2.4vw, 44px) clamp(20px, 3vw, 48px);
+    background: var(--sheet-2); border: 2px solid var(--rule-strong);
+  }
+  .state { display: none; }
+  .rush-status[data-state='tba'] .state--tba,
+  .rush-status[data-state='upcoming'] .state--upcoming,
+  .rush-status[data-state='live'] .state--live,
+  .rush-status[data-state='over'] .state--over { display: block; }
+
+  .word { font-size: clamp(28px, 2.4vw, 44px); line-height: 1.1; color: var(--gold-2); }
+  .note { margin-top: 10px; color: var(--text); }
+
+  .countdown { display: flex; flex-wrap: wrap; gap: 12px clamp(20px, 4vw, 48px); }
+  .countdown span { display: grid; gap: 8px; }
+  .countdown b {
+    font-size: clamp(40px, 8vw, 72px); line-height: 1; color: var(--text);
+    font-variant-numeric: tabular-nums;
+  }
+  .countdown small { font: 400 14px/1.2 var(--font-text); color: var(--text-2); }
+
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+  @media (max-width: 899px) { .rush-status { grid-template-columns: minmax(0, 1fr); align-items: start; } }
+</style>

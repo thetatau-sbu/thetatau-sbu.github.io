@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://thetatausbu.com/sitemap-index.xml

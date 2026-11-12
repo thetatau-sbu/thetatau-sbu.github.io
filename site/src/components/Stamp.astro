@@ -1,0 +1,62 @@
+---
+// Red rubber stamp for rush. No props: reads rush.json.
+// Put it directly inside the chapter-photo <figure> (which must be position: relative).
+// It sits at the figure's top-right with its bottom 28px overlapping the photo's top edge,
+// so most of it is on the black sheet above the photo. Give the figure >= 128px top margin
+// (>= 88px on phones) so it never reaches the buttons above. Size via --stamp-w / --stamp-h.
+// `seam` (home hero): from 1100px the stamp instead sits across the seam between the black text
+// column and the photo column, low on the photo's left edge (rotated -6deg), level with the buttons
+// and caption rather than the lede. How far it reaches into the text column follows the room the
+// text leaves beside the seam: 150px wide with 25% of it on black to 1279px, 190px with 35% to
+// 1599px, 236px with 40% from 1600px.
+// Under 1100px it falls back to the top-right placement above.
+import { rush, monthShort, dayNum } from '../lib/data';
+
+interface Props { seam?: boolean }
+const { seam = false } = Astro.props;
+
+const dates = rush.startDate
+  ? `${monthShort(rush.startDate)} ${dayNum(rush.startDate)}` +
+    (rush.endDate ? ` to ${monthShort(rush.endDate)} ${dayNum(rush.endDate)}` : '')
+  : 'Dates TBA';
+---
+<a class:list={['stamp', { 'stamp--seam': seam }]} href="/rush/" aria-label={`Rush ${rush.semester}: ${dates}`}>
+  <span class="plate s1" aria-hidden="true">Rush</span>
+  <span class="plate s2" aria-hidden="true">{rush.semester}</span>
+  <span class="plate s3" aria-hidden="true">{dates}</span>
+</a>
+
+<style>
+  .stamp {
+    --w: var(--stamp-w, 190px);
+    --h: var(--stamp-h, 130px);
+    position: absolute; z-index: 1;
+    top: calc(28px - var(--h)); right: 16px;
+    width: var(--w); height: var(--h);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: calc(var(--h) * 0.03);
+    border: 3px solid var(--red); border-radius: 4px;
+    color: var(--red); text-align: center; text-decoration: none; line-height: 1;
+    transform: rotate(-5deg); opacity: 0.95;
+  }
+  /* 1px inner border, 4px inside the 3px outer one */
+  .stamp::before { content: ''; position: absolute; inset: 4px; border: 1px solid var(--red); border-radius: 2px; pointer-events: none; }
+  .stamp:hover { color: var(--red); opacity: 1; }
+  .s1 { font-size: calc(var(--h) * 0.27); }
+  .s2 { font-size: calc(var(--h) * 0.15); }
+  .s3 { font-size: calc(var(--h) * 0.095); }
+  @media (min-width: 1100px) {
+    .stamp--seam {
+      --w: var(--stamp-w, 150px); --h: var(--stamp-h, 102px);
+      top: auto; right: auto; left: calc(var(--w) * -0.25); bottom: 20px; transform: rotate(-6deg);
+    }
+  }
+  @media (min-width: 1280px) {
+    .stamp--seam { --w: var(--stamp-w, 190px); --h: var(--stamp-h, 130px); left: calc(var(--w) * -0.35); bottom: 24px; }
+  }
+  @media (min-width: 1600px) {
+    .stamp--seam { --w: var(--stamp-w, 236px); --h: var(--stamp-h, 160px); left: calc(var(--w) * -0.4); bottom: 32px; }
+  }
+  @media (max-width: 599px) {
+    .stamp { --w: var(--stamp-w, 140px); --h: var(--stamp-h, 96px); right: 12px; }
+  }
+</style>

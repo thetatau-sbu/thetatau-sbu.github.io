@@ -1,0 +1,20 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Page not found" sheet="Page not found" description="This page doesn't exist on the Theta Tau at Stony Brook site. Try the home, rush, or brothers pages.">
+  <section class="col sec nf">
+    <h1>Page not found</h1>
+    <p class="lede intro">There's nothing at this address. Links from the old site may not work anymore.</p>
+    <div class="btn-row">
+      <a class="btn" href="/">Home</a>
+      <a class="btn btn--line" href="/rush/">Rush</a>
+      <a class="btn btn--line" href="/brothers/">Brothers</a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .nf { min-height: 50vh; }
+  .intro { margin-top: clamp(20px, 2vw, 36px); color: var(--text); }
+  .btn-row { margin-top: clamp(24px, 2.4vw, 44px); }
+</style>

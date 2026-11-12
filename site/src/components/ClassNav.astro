@@ -1,0 +1,39 @@
+---
+// "All classes": one 40px square per pledge class, showing its Greek letter ("F" for Founders).
+// Two-letter classes (ΓΒ) widen to fit: auto width, 10px side padding, never under 40px.
+// Greek letters are set in the text face: Open Gorton has no Greek glyphs.
+// Renders its own `.col.sec` section; put it last on a page.
+import { allClasses, classLabel } from '../lib/data';
+interface Props { current?: string }
+const { current } = Astro.props;
+---
+<nav class="col sec class-nav" aria-labelledby="all-classes">
+  <h2 class="h" id="all-classes">All classes</h2>
+  <ul>
+    {allClasses.map((c) => (
+      <li>
+        <a
+          href={`/brothers/class/${c.slug}/`}
+          aria-current={c.slug === current ? 'page' : undefined}
+          title={classLabel(c.name)}
+          aria-label={classLabel(c.name)}
+        >{c.letter}</a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<style>
+  ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  a {
+    display: grid; place-items: center;
+    box-sizing: border-box; min-width: 40px; height: 40px; padding: 0 10px;
+    border: 1px solid var(--rule-strong);
+    font-family: var(--font-text), system-ui, sans-serif;
+    font-weight: 700; font-size: 20px; line-height: 1;
+    color: var(--gold-2);
+    text-decoration: none;
+  }
+  a:hover { border-color: var(--gold-2); color: var(--gold-2); }
+  a[aria-current='page'] { background: var(--gold-2); border-color: var(--gold-2); color: #000; }
+</style>
