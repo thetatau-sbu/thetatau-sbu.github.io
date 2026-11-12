@@ -191,7 +191,7 @@ The site is online already. Nothing in this section needs doing again unless som
 
 - **Code:** [github.com/thetatau-sbu/thetatau-sbu.github.io](https://github.com/thetatau-sbu/thetatau-sbu.github.io). It is a public repository in the chapter's GitHub organization, `thetatau-sbu`.
 - **Publishing:** every push to the `main` branch rebuilds the site and puts it live in about a minute. The workflow that does it is `.github/workflows/deploy.yml`. Watch it under the repo's **Actions** tab. If a run fails, the site keeps showing the last good version.
-- **Address:** **https://thetatau-sbu.github.io** always works. **thetatausbu.com** is the public address once it is connected (see below).
+- **Address:** **https://thetatausbu.com**. The GitHub address, thetatau-sbu.github.io, forwards to it.
 
 **Who can change the site.** Nobody shares a password. Each webmaster uses their own GitHub account and gets added to the organization.
 
@@ -201,12 +201,12 @@ The site is online already. Nothing in this section needs doing again unless som
 
 **If it ever has to be set up again from nothing:** make a free GitHub organization, create a public repository in it named `<organization name>.github.io`, push this whole project folder to the branch `main`, then in the repo choose **Settings → Pages → Build and deployment → Source → GitHub Actions**.
 
-**Domain status, checked 2026-11-11: renewed.** `thetatausbu.com` is registered through the chapter's WordPress.com account, the one that signs in with the chapter Gmail. It is paid through **2027-09-08** with auto-renew on. WordPress.com charges the card on file on 2027-08-09, $19 a year. Right now the domain forwards to the old site at thetatausbu.design.blog, and it keeps doing that until the DNS records below are added. Check the current state any time by running `whois thetatausbu.com` and reading the `Domain Status` and `Registry Expiry Date` lines.
+**Domain status, checked 2026-11-11: connected.** `thetatausbu.com` is registered through the chapter's WordPress.com account, the one that signs in with the chapter Gmail. It is paid through **2027-09-08** with auto-renew on. WordPress.com charges the card on file on 2027-08-09, $19 a year. Since 2026-11-11 it points at this site, with HTTPS. The old WordPress site is still up at thetatausbu.design.blog. Check the registration any time by running `whois thetatausbu.com` and reading the `Domain Status` and `Registry Expiry Date` lines.
 
-**Connect thetatausbu.com:**
+**How thetatausbu.com is connected.** This is done. The steps are here in case it ever has to be redone.
 
 1. In the repo: **Settings → Pages → Custom domain**, type `thetatausbu.com`, and save. (The file `public/CNAME` holds the same domain as a backup, but GitHub still needs it typed in here.)
-2. The domain is registered at **WordPress.com**. Whoever has that login opens the domain's DNS settings and adds:
+2. The domain is registered at **WordPress.com**. Whoever has that login opens **Domains → thetatausbu.com → DNS**, clicks **Add record**, and adds these one at a time. The first A record replaces the one WordPress.com puts there itself.
 
 | Type  | Name  | Value                   |
 |-------|-------|-------------------------|
@@ -217,7 +217,7 @@ The site is online already. Nothing in this section needs doing again unless som
 | CNAME | www   | thetatau-sbu.github.io  |
 
 3. Wait. DNS can take up to a day.
-4. Back in **Settings → Pages**, tick **Enforce HTTPS** once GitHub allows it.
+4. Back in **Settings → Pages**, tick **Enforce HTTPS** once GitHub allows it. If GitHub has not issued the HTTPS certificate after an hour, remove the custom domain there, save, and type it in again. That makes GitHub check the DNS again.
 
 Auto-renew is on, so the domain renews itself every August as long as the card on file still works. Every summer, open **WordPress.com → Billing** and check that the card has not expired and belongs to someone still in the chapter. This matters: the domain expired on 2026-09-09, went offline on 2026-10-21, and was restored on 2026-11-11, about nine days before the restore window closed. Restoring a lapsed domain costs a redemption fee on top of the renewal (WordPress.com lists $80), and after the window anyone can register the name. A date a year ahead in `whois` right after the expiry day does not mean it was paid: the registry shows that placeholder for about six weeks.
 
