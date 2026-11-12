@@ -216,6 +216,8 @@ The site is online already. Nothing in this section needs doing again unless som
 | A     | @     | 185.199.111.153         |
 | CNAME | www   | thetatau-sbu.github.io  |
 
+   WordPress.com also adds a `*` record on its own. Delete it. It points every made-up address like `anything.thetatausbu.com` at GitHub, where a stranger could publish a page under it. It was deleted here on 2026-11-11.
+
 3. Wait. DNS can take up to a day.
 4. Back in **Settings → Pages**, tick **Enforce HTTPS** once GitHub allows it. If GitHub has not issued the HTTPS certificate after an hour, remove the custom domain there, save, and type it in again. That makes GitHub check the DNS again.
 
