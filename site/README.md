@@ -185,16 +185,21 @@ A 5th-year or someone who left early? Just fix their `status` by hand afterwards
 npm run og
 ```
 
-## 5. Put it online
+## 5. Where it lives online
 
-Do this once. After that, every push to `main` updates the site.
+The site is online already. Nothing in this section needs doing again unless something breaks.
 
-1. **Make a GitHub organization** named `thetatausbu` at [github.com/organizations/plan](https://github.com/organizations/plan) (the free plan is fine). This way the site belongs to the chapter, not one person's account. Add the e-board as owners.
-2. **Create a public repository** in that organization named exactly `thetatausbu.github.io`.
-3. **Push the whole project folder** (the one that contains `site/` and `original-site/`) to it, on the branch `main`. GitHub shows the commands on the empty repo's page.
-4. In the repo, go to **Settings → Pages → Build and deployment → Source** and choose **GitHub Actions**.
-5. That's it for building. The workflow in `.github/workflows/deploy.yml` builds and publishes the site on every push to `main`. Watch it run under the repo's **Actions** tab.
-6. The site is live right away at **https://thetatausbu.github.io**, even before the domain is connected.
+- **Code:** [github.com/thetatau-sbu/thetatau-sbu.github.io](https://github.com/thetatau-sbu/thetatau-sbu.github.io). It is a public repository in the chapter's GitHub organization, `thetatau-sbu`.
+- **Publishing:** every push to the `main` branch rebuilds the site and puts it live in about a minute. The workflow that does it is `.github/workflows/deploy.yml`. Watch it under the repo's **Actions** tab. If a run fails, the site keeps showing the last good version.
+- **Address:** **https://thetatau-sbu.github.io** always works. **thetatausbu.com** is the public address once it is connected (see below).
+
+**Who can change the site.** Nobody shares a password. Each webmaster uses their own GitHub account and gets added to the organization.
+
+- To add someone, open [github.com/orgs/thetatau-sbu/people](https://github.com/orgs/thetatau-sbu/people) and click **Invite member**. Give the next webmaster the **Owner** role.
+- Keep at least two owners at all times. If the only owner graduates and stops answering, nobody can get in.
+- The chapter's own GitHub account, `ThetaTauSBU`, is in the organization as the backup. It signs in with the chapter Gmail, so its password can always be reset from that inbox. Make sure it has the **Owner** role.
+
+**If it ever has to be set up again from nothing:** make a free GitHub organization, create a public repository in it named `<organization name>.github.io`, push this whole project folder to the branch `main`, then in the repo choose **Settings → Pages → Build and deployment → Source → GitHub Actions**.
 
 **Domain status, checked 2026-11-11: renewed.** `thetatausbu.com` is registered through the chapter's WordPress.com account, the one that signs in with the chapter Gmail. It is paid through **2027-09-08** with auto-renew on. WordPress.com charges the card on file on 2027-08-09, $19 a year. Right now the domain forwards to the old site at thetatausbu.design.blog, and it keeps doing that until the DNS records below are added. Check the current state any time by running `whois thetatausbu.com` and reading the `Domain Status` and `Registry Expiry Date` lines.
 
@@ -209,7 +214,7 @@ Do this once. After that, every push to `main` updates the site.
 | A     | @     | 185.199.109.153         |
 | A     | @     | 185.199.110.153         |
 | A     | @     | 185.199.111.153         |
-| CNAME | www   | thetatausbu.github.io   |
+| CNAME | www   | thetatau-sbu.github.io  |
 
 3. Wait. DNS can take up to a day.
 4. Back in **Settings → Pages**, tick **Enforce HTTPS** once GitHub allows it.
