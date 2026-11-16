@@ -8,19 +8,23 @@
     },
     {
       "role": "Vice Regent",
-      "brother": "sebastian-galofaro"
+      "brother": "sebastian-galofaro",
+      "photo": "sebastian-galofaro-eboard.jpg"
     },
     {
       "role": "Scribe",
-      "brother": "jessie-yang"
+      "brother": "jessie-yang",
+      "photo": "jessie-yang-eboard.jpg"
     },
     {
       "role": "Treasurer",
-      "brother": "caden-autencio"
+      "brother": "caden-autencio",
+      "photo": "caden-autencio-eboard.jpg"
     },
     {
       "role": "Corresponding Secretary",
-      "brother": "anthony-alters"
+      "brother": "anthony-alters",
+      "photo": "anthony-alters-eboard.jpg"
     }
   ]
 }
