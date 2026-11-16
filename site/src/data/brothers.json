@@ -1630,16 +1630,6 @@
     "photo": "sebastian-galofaro.jpg"
   },
   {
-    "id": "david-grager",
-    "name": "David Grager",
-    "pledgeClass": "Phi",
-    "gradYear": 2027,
-    "major": "Mechanical Engineering",
-    "status": "inactive",
-    "linkedin": "https://www.linkedin.com/in/dgrager/",
-    "photo": "david-grager.jpg"
-  },
-  {
     "id": "damaris-ferrer",
     "name": "Damaris Ferrer",
     "pledgeClass": "Chi",
@@ -1690,16 +1680,6 @@
     "photo": "hua-huang.jpg"
   },
   {
-    "id": "arjun-madhu",
-    "name": "Arjun Madhu",
-    "pledgeClass": "Chi",
-    "gradYear": 2026,
-    "major": "Information Systems",
-    "status": "alumni",
-    "linkedin": "https://www.linkedin.com/in/arjunmadhu/",
-    "photo": "arjun-madhu.jpg"
-  },
-  {
     "id": "ryan-ver-eecke",
     "name": "Ryan Ver Eecke",
     "pledgeClass": "Chi",
@@ -1728,16 +1708,6 @@
     "status": "active",
     "linkedin": "https://www.linkedin.com/in/bernadettebaroi/",
     "photo": "bernadette-baroi.jpg"
-  },
-  {
-    "id": "maya-pulawska",
-    "name": "Maya Pulawska",
-    "pledgeClass": "Psi",
-    "gradYear": 2027,
-    "major": "Mechanical Engineering / Applied Mathematics & Statistics",
-    "status": "inactive",
-    "linkedin": "https://www.linkedin.com/in/mayapulawska1/",
-    "photo": "maya-pulawska.jpg"
   },
   {
     "id": "alvin-kuruvilla",
