@@ -4,18 +4,44 @@
 // black rivets at the band's four corners. The one solid gold surface on the site.
 // Six cells in one row from 1100px, 3 + 3 on tablets, two per row on phones.
 // Usage: <Nameplate rows={[{ label: 'Chapter', value: 'Zeta Epsilon' }, …]} />
+// Motion (only under html.motion, set by the site script): each digit is a wheel that rolls from 0
+// through ten-plus digits to its value when the script adds .is-in; a sheen follows --lx across the brass.
 interface Props { rows: { label: string; value: string | number }[] }
 const { rows } = Astro.props;
+
+// Split a value into plain-text runs and digits ({ d, i }: the digit and its index within the value).
+type Piece = string | { d: number; i: number };
+function pieces(v: string | number): Piece[] {
+  const out: Piece[] = [];
+  let buf = '';
+  let i = 0;
+  for (const ch of String(v)) {
+    if (ch >= '0' && ch <= '9') {
+      if (buf) { out.push(buf); buf = ''; }
+      out.push({ d: Number(ch), i: i++ });
+    } else buf += ch;
+  }
+  if (buf) out.push(buf);
+  return out;
+}
+// The reel, top cell first: d, d-1 … 0, then 9 … 0 (d + 11 cells). At rest the top cell shows.
+const reel = (d: number) => [...Array.from({ length: d + 1 }, (_, k) => d - k), 9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
 ---
 <section class="np" aria-label="The chapter in numbers">
   <span class="rivets" aria-hidden="true"></span>
+  <span class="sheen" aria-hidden="true"></span>
   <dl class="wrap cells">
-    {rows.map((r) => (
-      <div class="cell">
-        <dt class="plate">{r.label}</dt>
-        <dd class="plate">{r.value}</dd>
-      </div>
-    ))}
+    {rows.map((r, c) => {
+      const ps = pieces(r.value);
+      const hasDigits = ps.some((p) => typeof p !== 'string');
+      return (
+        <div class="cell" style={`--c:${c}`}>
+          <dt class="plate">{r.label}</dt>
+          {/* no whitespace between the pieces: .plate's word-spacing would turn it into gaps */}
+          <dd class="plate">{hasDigits ? [<span class="visually-hidden">{String(r.value)}</span>, <span class="val" aria-hidden="true">{ps.map((p) => typeof p === 'string' ? p : <span class="odo" style={`--d:${p.d};--i:${p.i}`}><span class="odo-size">{p.d}</span><span class="odo-size0">0</span><span class="odo-reel">{reel(p.d).map((n) => <span>{n}</span>)}</span></span>)}</span>] : r.value}</dd>
+        </div>
+      );
+    })}
   </dl>
 </section>
 
@@ -41,6 +67,35 @@ const { rows } = Astro.props;
   dt { font-weight: 400; font-size: 13px; line-height: 1.2; color: #000; word-spacing: -0.55em; }
   dd { margin: 0; font-weight: 700; font-size: clamp(22px, 2vw, 36px); line-height: 1.05; color: #000; }
   @media (min-width: 1600px) { dt { font-size: 14px; } }
+
+  /* digit wheels: the window takes the final digit's width from an invisible copy; the reel's first
+     cell is the final digit, so at rest (no transform) it sits exactly where the plain glyph would.
+     vertical-align: top keeps the line box (and the baseline) as the plain text had it. */
+  .odo { display: inline-block; position: relative; overflow: hidden; height: 1.05em; vertical-align: top; }
+  .odo-size { visibility: hidden; }
+  .odo-reel { position: absolute; left: 0; top: 0; text-align: left; }
+  .odo-reel > span { display: block; height: 1.05em; line-height: 1.05; }
+  /* reset (screen only, so a print always has the real numbers): every wheel shows the 0 at the reel's
+     end, and the window takes a 0's width so that 0 is never cut off by a narrower digit's window */
+  .odo-size0 { display: none; }
+  @media screen {
+    :global(html.motion) .np:not(.is-in) .odo-size { display: none; }
+    :global(html.motion) .np:not(.is-in) .odo-size0 { display: inline; visibility: hidden; }
+    :global(html.motion) .np:not(.is-in) .odo-reel { transform: translateY(calc((10 + var(--d)) * -1.05em)); }
+  }
+  :global(html.motion) .np.is-in .odo-reel {
+    transition: transform calc(900ms + var(--i) * 110ms) cubic-bezier(.16, 1, .3, 1) calc(var(--c) * 70ms);
+  }
+
+  /* the light: overlay keeps the black engraving black and brightens only the brass */
+  @property --lx { syntax: '<percentage>'; inherits: true; initial-value: 30%; }
+  .sheen { position: absolute; inset: 0; pointer-events: none; display: none; }
+  :global(html.motion) .np { transition: --lx 350ms cubic-bezier(.2, .7, .2, 1); }
+  :global(html.motion) .np .sheen {
+    display: block;
+    mix-blend-mode: overlay;
+    background: linear-gradient(105deg, transparent calc(var(--lx) - 22%), rgba(255, 248, 226, 0.6) var(--lx), transparent calc(var(--lx) + 22%));
+  }
 
   /* tablet: 3 + 3, a rule between the rows */
   @media (max-width: 1099px) {

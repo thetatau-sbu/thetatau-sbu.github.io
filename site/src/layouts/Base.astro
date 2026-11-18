@@ -1,5 +1,8 @@
 ---
 import '../styles/global.css';
+import '../styles/motion.css';
+// The motion script runs in <head> before the first paint (see src/scripts/motion.js).
+import motion from '../scripts/motion.js?raw';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { site } from '../lib/data';
@@ -31,6 +34,7 @@ const orgLd = {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script is:inline set:html={motion} />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
@@ -48,6 +52,7 @@ const orgLd = {
     <script type="application/ld+json" set:html={JSON.stringify(orgLd)} />
   </head>
   <body>
+    <div class="plot" aria-hidden="true"></div>
     <a class="skip" href="#main">Skip to content</a>
     <Header />
     <main id="main" class:list={['pad', { 'pad--flush': flush }]}>

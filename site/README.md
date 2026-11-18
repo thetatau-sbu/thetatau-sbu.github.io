@@ -231,8 +231,31 @@ Auto-renew is on, so the domain renews itself every August as long as the card o
 - `src/pages/` — one file per page (home, rush, brothers, careers, events, 404).
 - `src/components/` — reusable pieces (header, footer, brother card, rush countdown).
 - `src/assets/rush/` — rush flyers (the one shown is set by `flyer` in `rush.json`).
-- `src/layouts/` — the shell every page sits in. `src/styles/` — colors, fonts, spacing.
+- `src/layouts/` — the shell every page sits in. `src/styles/` — colors, fonts, spacing (`global.css`) and the motion (`motion.css`).
+- `src/scripts/` — `motion.js`, the small script that switches the motion on (see section 7).
 - `src/fonts/` — the lettering font for titles, Open Gorton (with its license). The text font, Atkinson Hyperlegible Next, is installed by `npm install`; nothing to download.
 - `public/` — files copied as-is: logo, icons, share image (`og.jpg`), `CNAME`.
 - `scripts/` — helpers: `check-data.mjs` (runs before every build), `graduate.mjs`, `make-og.mjs` + `og.html` (the share image).
 - `../.github/workflows/deploy.yml` — the automatic deploy.
+
+## 7. Motion
+
+A few things on the site move. Everything else stays still: nothing fades in as you scroll.
+
+- **The plot.** On the first page someone opens, a black sheet covers the page and a thin gold line sweeps across it from left to right, like a pen plotter drawing the page. The page title glows gold just behind the line and cools to white. It plays once per browser tab session. To see it again, open the site in a new tab.
+- **The stamp.** The red Rush stamp on the home page lands like a rubber stamp, with a faint ring of ink. It shrinks a little when you point at it or press it.
+- **The nameplate.** The numbers on the brass band count up when it comes into view, and a band of light moves across the brass with the mouse (or with scrolling on a phone).
+- **The lamp.** With a mouse or trackpad, the grid under the pointer lights up in gold.
+- **Hover states.** Buttons fill with red from the left, links ease their color and underline, the header links draw a line under themselves, and brother photos lean in with gold corner marks.
+- **Page changes.** In browsers that support it, the page slides over when you go to another page while the header stays put.
+
+Where it lives:
+
+- `src/styles/motion.css` — all of the movement and its timing.
+- `src/scripts/motion.js` — the small script that starts it. It is copied into every page by `src/layouts/Base.astro`.
+- The nameplate's counters and light are in `src/components/Nameplate.astro`.
+
+**It switches itself off** for anyone whose phone or computer is set to reduce motion (on an iPhone: Settings, then Accessibility, then Motion, then Reduce Motion). They see the site completely still. If the script ever fails, the site also falls back to the still version, so nothing can get stuck hidden.
+
+**To switch it all off**, open `src/layouts/Base.astro` and delete the line `<script is:inline set:html={motion} />`. Everything except the page-change slide stops. To stop that as well, delete the `import '../styles/motion.css';` line in the same file.
+
